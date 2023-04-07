@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+}
+
+#navbar{
+    width:100%;
+    height:70px;
+    background-color: #00c6c5;
+    display:flex;
+    position: fixed;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    top:0;
+    left:0;
+}
+#navbar.shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+#logo1{
+    height:100%;
+    width:150px;
+    justify-content: space-between;
+    /* margin-top: 10px; */
+    background-image: url("img/logo.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#mid{
+    width:500px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+    
+}
+
+#contactBtn{
+    border:none;
+    background-color: #009494;
+    color:white;
+    height:50px;
+    padding:3px 3px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    width:150px;
+    text-align: center;
+    display:grid;
+    place-items: center;
+}
+
+#contactBtn:hover{
+    background-color: #47bef1;
+}
+
+a{
+    text-decoration: none; 
+    color:white;
+    position: relative;
+    display: inline-block;
+}
+
+
+a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  a:hover:after {
+    transform: scaleX(1);
+  }
+
+a:visited{
+    color:white;
+}
+
+
+#myContent{
+    height:100vh;
+    width:100%;
+    margin-top: 70px;
+    
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap:30px;
+}
+
+#kontaktHeader{
+    font-size: 96px;
+
+}
+
+#ikony{
+    width:100%;
+    height:200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    gap:30px;
+}
+#tele,#mail,#adres{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+#mail-text,#adres-text,#tele-text{
+    font-size: 2em;
+}
+#tele-icon{
+    width:120px;
+    height:125px;
+    background-image: url("img/call.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#mail-icon{
+    width:130px;
+    height:122px;
+    background-image: url("img/mail.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#adres-icon{
+    width:120px;
+    height:122px;
+    background-image: url("img/house.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#map{
+    width:100%;
+    height:100%;
+    
+}
+
+#footer{
+
+  
+    width:100%;
+    height:50%;
+    background-color: white;
+}
