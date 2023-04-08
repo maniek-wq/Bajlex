@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kontakt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="16x16" href="img/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <title>Bajlex</title>
+</head>
+<body>
+
+    <div id="container">
+        <div id="navbar">
+            <div id="logo1"></div>
+            <div id="mid">
+                <a href="index.html">Strona główna</a>
+                <a href="uslugi.html">Usługi</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+            <div id="contactBtn"><a href="kontakt.html">Skontaktuj się!</a></div>
+        </div>
+            <div id="myContent">
+
+            <h1 id="kontaktHeader">KONTAKT</h1>
+
+            <div id="ikony">
+                    <div id="tele">
+                        <div id="tele-icon"></div>
+                        <div id="tele-text">660 071 024</div>
+                    </div>
+                    <div id="mail">
+                        <div id="mail-icon"></div>
+                        <div id="mail-text">biuro@bajlex.pl</div>
+                    </div>
+                    <div id="adres">
+                        <div id="adres-icon"></div>
+                        <div id="adres-text">Romantyczna, 3</div>
+                    </div>
+            </div>
+            <div id="map"></div>
+            <script>
+            var map = L.map('map').setView([53.3670395, 14.6662252],15);
+            L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=tDyqi7VMyf5sdXUQFsug',{attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'}).addTo(map);
+            var marker = L.marker([53.3670395, 14.6662252] ).addTo(map);
+            </script>
+            <div id="footer">
+                <div id="socialMedia">
+                    <div id="facebook"></div>
+                    <div id="instagram"></div>
+
+                </div>
+                <h3>Bajlex wszystkie prawa zastrzeżone ©</h3>
+            </div>
+            </div>
+        
+    </div>
+    <script src="kontakt.js"></script>
+</body>
+</html>
