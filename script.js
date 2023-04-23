@@ -63,38 +63,27 @@ checkBtn.addEventListener("click",function(){
 
 
     const contactWriting = document.createElement("a");
-    contactWriting.textContent="kontakt";
+    contactWriting.textContent="Kontakt";
     contactWriting.addEventListener("click",function(){
         window.location.href="./kontakt.html";
+    });
+
+    const newsWriting = document.createElement("a");
+    newsWriting.textContent="Aktualności";
+    newsWriting.addEventListener("click",function(){
+        window.location.href="./new.html";
     });
       
     mid.appendChild(mainPageWriting);
     mid.appendChild(serivceWriting);
     mid.appendChild(contactWriting);
+    mid.appendChild(newsWriting);
 
-    const newContent = document.createElement("div");
-    newContent.setAttribute("id","newContent");
-    newScreen.appendChild(newContent);
-
-    const newContentLogo = document.createElement("div");
-    newContentLogo.setAttribute("id","newContentLogo");
-
-    const newContentText = document.createElement("div");
-    newContentText.setAttribute("id","newContentText");
-
-    const slideDownIcon = document.createElement("button");
-    slideDownIcon.setAttribute("id","slideDownIcon");
-
-    newContent.appendChild(newContentLogo);
-    newContent.appendChild(newContentText);
-    newContent.appendChild(slideDownIcon);
-
-    newContentText.textContent="Potrzebujesz profesjonalnie wykonanych pomiarów natężenia oświetlenia? Zgłoś się do nas! \n\nNasza firma oferuje pełny zakres badań przeprowadzanych przez wykwalifikowaną kadrę, bazując na obowiązujących regulacjach prawnych. Do naszych badań wykorzystujemy wzorcowane przyrządy najwyższej klasy.";
 
    
 
-    slideDownIcon.addEventListener("click",function(){
-        newContent.style.display="none";
+    
+        
         navbar.style.display="flex";
         const offerSite = document.createElement("div");
         offerSite.setAttribute("id","offerSite");
@@ -102,308 +91,310 @@ checkBtn.addEventListener("click",function(){
 
         const offerWriting = document.createElement("h1");
         offerWriting.setAttribute("id","offerWriting");
-        offerWriting.textContent="Nasza Oferta";
+        offerWriting.textContent="O firmie";
         offerSite.appendChild(offerWriting);
 
-        const servicesDivs = document.createElement("div");
+        const servicesDivs = document.createElement("h3");
         servicesDivs.setAttribute("id","servicesDivs");
         offerSite.appendChild(servicesDivs);
+        servicesDivs.style.whiteSpace="pre-wrap";
+        servicesDivs.textContent="Jesteśmy firmą z wieloletnim doświadczeniem w branży. Posiadamy specjalistów z wieloletnim doświadczeniem i wysokimi kwalifikacjami.\nNasze działania są zawsze sprawne i efektywne, przez co w doskonały sposób rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Bezpieczeństwo, higiena pracy i ochrona przeciwpożarowa, to niezwykle ważny i istotny element każdej firmy. Firma, którą od wielu lat tworzymy, świadczy kompleksową obsługę firm, w zakresie BHP i PPOŻ. Firma Bajlex pojawiła się na rynku w 2005 roku. Od początku istnienia, stawia na wysoką jakość, podtrzymywanie długoletnich relacji z Klientem i pomoc w każdej sytuacji. Organizując szkolenia BHP, staramy się w pełni przekazać naszą wiedzę firmom i instytucjom, by tym samym zapewnić pracownikom jak najlepsze warunki do pracy, przy zachowaniu maksimum bezpieczeństwa.\nZapraszamy do współpracy.\nSkontaktuj się z jednym z naszych specjalistów bhp i p.poż";
 
 
 /**************************FIRE COURSE***********************************/
-{
-        const fireCourse = document.createElement("div");
-        fireCourse.setAttribute("id","fireCourse");
-        const fireCourseIcon = document.createElement("div");
-        fireCourseIcon.setAttribute("id","fireCourseIcon");
-        const fireCourseText = document.createElement("div");
-        fireCourseText.setAttribute("id","fireCourseText");
-        fireCourseText.textContent="Szkolenia przeciwpożarowe";
-        servicesDivs.appendChild(fireCourse);
-        fireCourse.appendChild(fireCourseIcon);
-        fireCourse.appendChild(fireCourseText);
-}     
+// {
+//         const fireCourse = document.createElement("div");
+//         fireCourse.setAttribute("id","fireCourse");
+//         const fireCourseIcon = document.createElement("div");
+//         fireCourseIcon.setAttribute("id","fireCourseIcon");
+//         const fireCourseText = document.createElement("div");
+//         fireCourseText.setAttribute("id","fireCourseText");
+//         fireCourseText.textContent="Szkolenia przeciwpożarowe";
+//         servicesDivs.appendChild(fireCourse);
+//         fireCourse.appendChild(fireCourseIcon);
+//         fireCourse.appendChild(fireCourseText);
+// }     
         
-        fireCourse.addEventListener("click",function(){
-                offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
-                if(!isExisting){
-                const fireCourseInformation = document.createElement("div");
-                fireCourseInformation.setAttribute("id","fireCourseInformation");
-                fireCourse.appendChild(fireCourseInformation);
-                fireCourseInformation.textContent="W trakcie szkoleń PPOŻ zdobędziesz praktyczne umiejętności oraz wiedzę teoretyczną, które są niezbędne w sytuacji zagrożenia pożarowego oraz ratowania ludzkiego życia.";
-                isExisting=true;
-                document.addEventListener("click",function(event){
-                        if(!fireCourseInformation.contains(event.target) && !fireCourse.contains(event.target)){
-                                fireCourseInformation.remove();
-                                const isDivExisting = document.querySelector('fireCourseInformation');
-                                if(!isDivExisting){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
-                                isExisting=false;
-                        }
-                
-                }); 
-
-                setTimeout(function() {
-                        fireCourseInformation.remove();
-                    }, 10000);
-                }
-      
-        });
-/**************************FIRE COURSE END***********************************/
-
-
-/**************************MEASURMENT***********************************/
-{
-        const measurement = document.createElement("div");
-        measurement.setAttribute("id","measurement");
-        const measurementIcon = document.createElement("div");
-        measurementIcon.setAttribute("id","measurementIcon");
-        const measurementText = document.createElement("div");
-        measurementText.setAttribute("id","measurementText");
-        measurementText.textContent="Pomiary środowiska pracy";
-        servicesDivs.appendChild(measurement);
-        measurement.appendChild(measurementIcon);
-        measurement.appendChild(measurementText);
-}
-        measurement.addEventListener("click",function(){
-                
-                if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
-                const measurementInformation = document.createElement("div");
-                measurementInformation.setAttribute("id","measurementInformation");
-                measurement.appendChild(measurementInformation);
-                measurementInformation.textContent="Specjalizujemy się w wykonywaniu pomiarów środowiska pracy, bazując na obowiązujących regulacjach prawnych. Oferujemy pełny zakres badań czynników szkodliwych i uciążliwych w środowisku pracy, w tym pomiary natężenia oświetlenia.";
-                isExisting=true;
-                document.addEventListener("click",function(event){
-                        if(!measurementInformation.contains(event.target) && !measurement.contains(event.target)){
-                                measurementInformation.remove();
-                                const isDivExisting1 = document.querySelector('measurementInformation');
-                                if(!isDivExisting1){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
-                                isExisting=false;
-                                
-                        }
-                });
-                setTimeout(function() {
-                        measurementInformation.remove();
-                    }, 10000);
-                }
-                
-                
-        });
-
-/**************************MEASURMENT END***********************************/
-
-
-/**************************BHP***********************************/
-{
-        const BHP = document.createElement("div");
-        BHP.setAttribute("id","BHP");
-        const BHPIcon = document.createElement("div");
-        BHPIcon.setAttribute("id","BHPIcon");
-        const BHPText = document.createElement("div");
-        BHPText.setAttribute("id","BHPText");
-        BHPText.textContent="Szkolenia BHP";
-        servicesDivs.appendChild(BHP);
-        BHP.appendChild(BHPIcon);
-        BHP.appendChild(BHPText);
-}
-
-        BHP.addEventListener("click",function(){
-                
-                if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
-                const BHPInformation = document.createElement("div");
-                BHPInformation.setAttribute("id","BHPInformation");
-                BHP.appendChild(BHPInformation);
-                BHPInformation.textContent="Oferujemy pełną gamę szkoleń w zakresie BHP (wstępne, oraz okresowe dla wszystkich grup pracowniczych). Jeśli jesteś zainteresowany szkoleniem na odległość, możesz połączyć się z nami z dowolnego miejsca online, a my udzielimy pełnowartościowego, unikatowego szkolenia BHP, z wykorzystaniem profesjonalnych prezentacji multimedialnych.";
-                isExisting=true;
-                document.addEventListener("click",function(event){
-                        if(!BHPInformation.contains(event.target) && !BHP.contains(event.target)){
-                                BHPInformation.remove();
-                                const isDivExisting2 = document.querySelector('BHPInformation');
-                                if(!isDivExisting2){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
-                                isExisting=false;
-                             
-                        }
-                });
-                setTimeout(function() {
-                        BHPInformation.remove();
-                    }, 10000);
-                }
-                
-                
-        });
-/**************************BHP END***********************************/
-
-
-/**************************OUTSOURCING***********************************/
-{
-        const outsourcing = document.createElement("div");
-        outsourcing.setAttribute("id","outsourcing");
-        const outsourcingIcon = document.createElement("div");
-        outsourcingIcon.setAttribute("id","outsourcingIcon");
-        const outsourcingText = document.createElement("div");
-        outsourcingText.setAttribute("id","outsourcingText");
-        outsourcingText.textContent="Outsourcing";
-        servicesDivs.appendChild(outsourcing);
-        outsourcing.appendChild(outsourcingIcon);
-        outsourcing.appendChild(outsourcingText);
-}
-
-        outsourcing.addEventListener("click",function(){
-                
-                if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
-                const outsourcingInformation = document.createElement("div");
-                outsourcingInformation.setAttribute("id","outsourcingInformation");
-                outsourcing.appendChild(outsourcingInformation);
-                outsourcingInformation.textContent="Nawiązujemy współpracę z firmami, oferując wykonywanie pełnego zakresu zadań służby BHP, w celu wypełnienia przepisów związanych z bezpieczeństwem i higieną pracy.";
-                isExisting=true;
-                document.addEventListener("click",function(event){
-                        if(!outsourcingInformation.contains(event.target) && !outsourcing.contains(event.target)){
-                                outsourcingInformation.remove();
-                                const isDivExisting3 = document.querySelector('outsourcingInformation');
-                                if(!isDivExisting3){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
-                                isExisting=false;
-                               
-                        }
-                });
-                setTimeout(function() {
-                        outsourcingInformation.remove();
-                    }, 10000);
-                }
-                
-                
-        });
-/**************************OUTSOURCING END***********************************/
-
-
-/**************************BHP SUPERVISING***********************************/
-{
-        const bhpSupervising = document.createElement("div");
-        bhpSupervising.setAttribute("id","bhpSupervising");
-        const bhpSupervisingIcon = document.createElement("div");
-        bhpSupervisingIcon.setAttribute("id","bhpSupervisingIcon");
-        const bhpSupervisingText = document.createElement("div");
-        bhpSupervisingText.setAttribute("id","bhpSupervisingText");
-        bhpSupervisingText.textContent="Nadzór BHP na budowach";
-        servicesDivs.appendChild(bhpSupervising);
-        bhpSupervising.appendChild(bhpSupervisingIcon);
-        bhpSupervising.appendChild(bhpSupervisingText);
-}
-
-        bhpSupervising.addEventListener("click",function(){
-                
-                if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
-                const bhpSupervisingInformation = document.createElement("div");
-                bhpSupervisingInformation.setAttribute("id","bhpSupervisingInformation");
-                bhpSupervising.appendChild(bhpSupervisingInformation);
-                bhpSupervisingInformation.textContent="Od wielu lat, z sukcesami sprawujemy kompleksowy nadzór BHP nad budowami w Polsce, oraz na terenie Unii Europejskiej. Uczestniczymy w sporządzaniu planu BIOZ, przeprowadzamy kontrolę warunków pracy, analizujemy i oceniamy ryzyko, w podejmowanych pracach na terenie obsługiwanych budów. Oferujemy także sporządzanie wszelkiej niezbędnej dokumentacji związanej z procesem.";
-                isExisting=true;
-                document.addEventListener("click",function(event){
-                        if(!bhpSupervisingInformation.contains(event.target) && !bhpSupervising.contains(event.target)){
-                                bhpSupervisingInformation.remove();
-                                const isDivExisting4 = document.querySelector('bhpSupervisingInformation');
-                                if(!isDivExisting4){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
-                                isExisting=false;
-                                
-                        }
-                });
-                setTimeout(function() {
-                        bhpSupervisingInformation.remove();
-                    }, 10000);
-                }
-                
-                
-        });
-/**************************BPH SUPERVISING END***********************************/
-        
-
-/**************************DOCUMENTATION***********************************/
-{
-        const documentation = document.createElement("div");
-        documentation.setAttribute("id","documentation");
-        const documentationIcon = document.createElement("div");
-        documentationIcon.setAttribute("id","documentationIcon");
-        const documentationText = document.createElement("div");
-        documentationText.setAttribute("id","documentationText");
-        documentationText.textContent="Dokumentacja BHP i PPOŻ";
-        servicesDivs.appendChild(documentation);
-        documentation.appendChild(documentationIcon);
-        documentation.appendChild(documentationText);
-}
-
-        documentation.addEventListener("click",function(){
-                
-                if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
-                const documentationInformation = document.createElement("div");
-                documentationInformation.setAttribute("id","documentationInformation");
-                documentation.appendChild(documentationInformation);
-                documentationInformation.textContent="Przyjmujemy zlecenia na opracowanie: instrukcji BHP dla maszyn i urządzeń, oceny ryzyka zawodowego, instrukcję bezpieczeństwa pożarowego, wykonanie pełnej dokumentacji powypadkowej.";
-                isExisting=true;
-                document.addEventListener("click",function(event){
-                        if(!documentationInformation.contains(event.target) && !documentation.contains(event.target)){
-                                documentationInformation.remove();
-                                const isDivExisting5 = document.querySelector('documentationInformation');
-                                if(!isDivExisting5){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
-                                isExisting=false;
-                              
-                        }
-                });
-
-                setTimeout(function() {
-                        documentationInformation.remove();
-                    }, 10000);
-                }
-                
-                
-        });
-/**************************DOCUMENTATION END***********************************/
-
-
-/**************************FIRST AID***********************************/
-
-        const firstAid = document.createElement("div");
-        firstAid.setAttribute("id","firstAid");
-        const firstAidIcon = document.createElement("div");
-        firstAidIcon.setAttribute("id","firstAidIcon");
-        const firstAidText = document.createElement("div");
-        firstAidText.setAttribute("id","firstAidText");
-        firstAidText.textContent="Szkolenia z pierwszej pomocy";
-        servicesDivs.appendChild(firstAid);
-        firstAid.appendChild(firstAidIcon);
-        firstAid.appendChild(firstAidText);
-
-
-        firstAid.addEventListener("click",function(){
-                if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
-                const firstAidInformation = document.createElement("div");
-                firstAidInformation.setAttribute("id","firstAidInformation");
-                firstAid.appendChild(firstAidInformation);
-                firstAidInformation.textContent="Szkolenia organizowane przez BAJLEX przeznaczone są dla każdej grupy zawodowej, a także osób indywidualnych chcących uzyskać wiedzę w zakresie udzielania pierwszej pomocy. Dbając o jakość szkoleń, do ich prowadzenia wykorzystujemy prezentacje multimedialne, fantomy oraz defibrylator AED.";
-                isExisting=true;
+//         fireCourse.addEventListener("click",function(){
                
-                document.addEventListener("click",function(event){
-                        if(!firstAidInformation.contains(event.target) && !firstAid.contains(event.target)){
-                                firstAidInformation.remove();
-                                const isDivExisting6 = document.querySelector('firstAidInformation');
-                                if(!isDivExisting6){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
-                                isExisting=false;
+//                 if(!isExisting){
+//                 const fireCourseInformation = document.createElement("div");
+//                 fireCourseInformation.setAttribute("id","fireCourseInformation");
+//                 fireCourse.appendChild(fireCourseInformation);
+//                 fireCourseInformation.textContent="W trakcie szkoleń PPOŻ zdobędziesz praktyczne umiejętności oraz wiedzę teoretyczną, które są niezbędne w sytuacji zagrożenia pożarowego oraz ratowania ludzkiego życia.";
+//                 isExisting=true;
+//                 document.addEventListener("click",function(event){
+//                         if(!fireCourseInformation.contains(event.target) && !fireCourse.contains(event.target)){
+//                                 fireCourseInformation.remove();
+//                                 const isDivExisting = document.querySelector('fireCourseInformation');
                                 
-                        }
-                });
+//                                 isExisting=false;
+//                         }
+                
+//                 }); 
 
-                setTimeout(function() {
-                        firstAidInformation.remove();
-                    }, 10000);
-                }
+//                 setTimeout(function() {
+//                         fireCourseInformation.remove();
+//                     }, 10000);
+//                 }
+      
+//         });
+// /**************************FIRE COURSE END***********************************/
+
+
+// /**************************MEASURMENT***********************************/
+// {
+//         const measurement = document.createElement("div");
+//         measurement.setAttribute("id","measurement");
+//         const measurementIcon = document.createElement("div");
+//         measurementIcon.setAttribute("id","measurementIcon");
+//         const measurementText = document.createElement("div");
+//         measurementText.setAttribute("id","measurementText");
+//         measurementText.textContent="Pomiary środowiska pracy";
+//         servicesDivs.appendChild(measurement);
+//         measurement.appendChild(measurementIcon);
+//         measurement.appendChild(measurementText);
+// }
+//         measurement.addEventListener("click",function(){
+                
+//                 if(!isExisting){
+                        
+//                 const measurementInformation = document.createElement("div");
+//                 measurementInformation.setAttribute("id","measurementInformation");
+//                 measurement.appendChild(measurementInformation);
+//                 measurementInformation.textContent="Specjalizujemy się w wykonywaniu pomiarów środowiska pracy, bazując na obowiązujących regulacjach prawnych. Oferujemy pełny zakres badań czynników szkodliwych i uciążliwych w środowisku pracy, w tym pomiary natężenia oświetlenia.";
+//                 isExisting=true;
+//                 document.addEventListener("click",function(event){
+//                         if(!measurementInformation.contains(event.target) && !measurement.contains(event.target)){
+//                                 measurementInformation.remove();
+//                                 const isDivExisting1 = document.querySelector('measurementInformation');
+                                
+//                                 isExisting=false;
+                                
+//                         }
+//                 });
+//                 setTimeout(function() {
+//                         measurementInformation.remove();
+//                     }, 10000);
+//                 }
                 
                 
-        });
+//         });
 
-/**************************FIRST AID END***********************************/
+// /**************************MEASURMENT END***********************************/
+
+
+// /**************************BHP***********************************/
+// {
+//         const BHP = document.createElement("div");
+//         BHP.setAttribute("id","BHP");
+//         const BHPIcon = document.createElement("div");
+//         BHPIcon.setAttribute("id","BHPIcon");
+//         const BHPText = document.createElement("div");
+//         BHPText.setAttribute("id","BHPText");
+//         BHPText.textContent="Szkolenia BHP";
+//         servicesDivs.appendChild(BHP);
+//         BHP.appendChild(BHPIcon);
+//         BHP.appendChild(BHPText);
+// }
+
+//         BHP.addEventListener("click",function(){
+                
+//                 if(!isExisting){
+                       
+//                 const BHPInformation = document.createElement("div");
+//                 BHPInformation.setAttribute("id","BHPInformation");
+//                 BHP.appendChild(BHPInformation);
+//                 BHPInformation.textContent="Oferujemy pełną gamę szkoleń w zakresie BHP (wstępne, oraz okresowe dla wszystkich grup pracowniczych). Jeśli jesteś zainteresowany szkoleniem na odległość, możesz połączyć się z nami z dowolnego miejsca online, a my udzielimy pełnowartościowego, unikatowego szkolenia BHP, z wykorzystaniem profesjonalnych prezentacji multimedialnych.";
+//                 isExisting=true;
+//                 document.addEventListener("click",function(event){
+//                         if(!BHPInformation.contains(event.target) && !BHP.contains(event.target)){
+//                                 BHPInformation.remove();
+//                                 const isDivExisting2 = document.querySelector('BHPInformation');
+                               
+//                                 isExisting=false;
+                             
+//                         }
+//                 });
+//                 setTimeout(function() {
+//                         BHPInformation.remove();
+//                     }, 10000);
+//                 }
+                
+                
+//         });
+// /**************************BHP END***********************************/
+
+
+// /**************************OUTSOURCING***********************************/
+// {
+//         const outsourcing = document.createElement("div");
+//         outsourcing.setAttribute("id","outsourcing");
+//         const outsourcingIcon = document.createElement("div");
+//         outsourcingIcon.setAttribute("id","outsourcingIcon");
+//         const outsourcingText = document.createElement("div");
+//         outsourcingText.setAttribute("id","outsourcingText");
+//         outsourcingText.textContent="Outsourcing";
+//         servicesDivs.appendChild(outsourcing);
+//         outsourcing.appendChild(outsourcingIcon);
+//         outsourcing.appendChild(outsourcingText);
+// }
+
+//         outsourcing.addEventListener("click",function(){
+                
+//                 if(!isExisting){
+                       
+//                 const outsourcingInformation = document.createElement("div");
+//                 outsourcingInformation.setAttribute("id","outsourcingInformation");
+//                 outsourcing.appendChild(outsourcingInformation);
+//                 outsourcingInformation.textContent="Nawiązujemy współpracę z firmami, oferując wykonywanie pełnego zakresu zadań służby BHP, w celu wypełnienia przepisów związanych z bezpieczeństwem i higieną pracy.";
+//                 isExisting=true;
+//                 document.addEventListener("click",function(event){
+//                         if(!outsourcingInformation.contains(event.target) && !outsourcing.contains(event.target)){
+//                                 outsourcingInformation.remove();
+//                                 const isDivExisting3 = document.querySelector('outsourcingInformation');
+                                
+//                                 isExisting=false;
+                               
+//                         }
+//                 });
+//                 setTimeout(function() {
+//                         outsourcingInformation.remove();
+//                     }, 10000);
+//                 }
+                
+                
+//         });
+// /**************************OUTSOURCING END***********************************/
+
+
+// /**************************BHP SUPERVISING***********************************/
+// {
+//         const bhpSupervising = document.createElement("div");
+//         bhpSupervising.setAttribute("id","bhpSupervising");
+//         const bhpSupervisingIcon = document.createElement("div");
+//         bhpSupervisingIcon.setAttribute("id","bhpSupervisingIcon");
+//         const bhpSupervisingText = document.createElement("div");
+//         bhpSupervisingText.setAttribute("id","bhpSupervisingText");
+//         bhpSupervisingText.textContent="Nadzór BHP na budowach";
+//         servicesDivs.appendChild(bhpSupervising);
+//         bhpSupervising.appendChild(bhpSupervisingIcon);
+//         bhpSupervising.appendChild(bhpSupervisingText);
+// }
+
+//         bhpSupervising.addEventListener("click",function(){
+                
+//                 if(!isExisting){
+                        
+//                 const bhpSupervisingInformation = document.createElement("div");
+//                 bhpSupervisingInformation.setAttribute("id","bhpSupervisingInformation");
+//                 bhpSupervising.appendChild(bhpSupervisingInformation);
+//                 bhpSupervisingInformation.textContent="Od wielu lat, z sukcesami sprawujemy kompleksowy nadzór BHP nad budowami w Polsce, oraz na terenie Unii Europejskiej. Uczestniczymy w sporządzaniu planu BIOZ, przeprowadzamy kontrolę warunków pracy, analizujemy i oceniamy ryzyko, w podejmowanych pracach na terenie obsługiwanych budów. Oferujemy także sporządzanie wszelkiej niezbędnej dokumentacji związanej z procesem.";
+//                 isExisting=true;
+//                 document.addEventListener("click",function(event){
+//                         if(!bhpSupervisingInformation.contains(event.target) && !bhpSupervising.contains(event.target)){
+//                                 bhpSupervisingInformation.remove();
+//                                 const isDivExisting4 = document.querySelector('bhpSupervisingInformation');
+                                
+//                                 isExisting=false;
+                                
+//                         }
+//                 });
+//                 setTimeout(function() {
+//                         bhpSupervisingInformation.remove();
+//                     }, 10000);
+//                 }
+                
+                
+//         });
+// /**************************BPH SUPERVISING END***********************************/
+        
+
+// /**************************DOCUMENTATION***********************************/
+// {
+//         const documentation = document.createElement("div");
+//         documentation.setAttribute("id","documentation");
+//         const documentationIcon = document.createElement("div");
+//         documentationIcon.setAttribute("id","documentationIcon");
+//         const documentationText = document.createElement("div");
+//         documentationText.setAttribute("id","documentationText");
+//         documentationText.textContent="Dokumentacja BHP i PPOŻ";
+//         servicesDivs.appendChild(documentation);
+//         documentation.appendChild(documentationIcon);
+//         documentation.appendChild(documentationText);
+// }
+
+//         documentation.addEventListener("click",function(){
+                
+//                 if(!isExisting){
+                        
+//                 const documentationInformation = document.createElement("div");
+//                 documentationInformation.setAttribute("id","documentationInformation");
+//                 documentation.appendChild(documentationInformation);
+//                 documentationInformation.textContent="Przyjmujemy zlecenia na opracowanie: instrukcji BHP dla maszyn i urządzeń, oceny ryzyka zawodowego, instrukcję bezpieczeństwa pożarowego, wykonanie pełnej dokumentacji powypadkowej.";
+//                 isExisting=true;
+//                 document.addEventListener("click",function(event){
+//                         if(!documentationInformation.contains(event.target) && !documentation.contains(event.target)){
+//                                 documentationInformation.remove();
+//                                 const isDivExisting5 = document.querySelector('documentationInformation');
+                                
+//                                 isExisting=false;
+                              
+//                         }
+//                 });
+
+//                 setTimeout(function() {
+//                         documentationInformation.remove();
+//                     }, 10000);
+//                 }
+                
+                
+//         });
+// /**************************DOCUMENTATION END***********************************/
+
+
+// /**************************FIRST AID***********************************/
+
+//         const firstAid = document.createElement("div");
+//         firstAid.setAttribute("id","firstAid");
+//         const firstAidIcon = document.createElement("div");
+//         firstAidIcon.setAttribute("id","firstAidIcon");
+//         const firstAidText = document.createElement("div");
+//         firstAidText.setAttribute("id","firstAidText");
+//         firstAidText.textContent="Szkolenia z pierwszej pomocy";
+//         servicesDivs.appendChild(firstAid);
+//         firstAid.appendChild(firstAidIcon);
+//         firstAid.appendChild(firstAidText);
+
+
+//         firstAid.addEventListener("click",function(){
+//                 if(!isExisting){
+                        
+//                 const firstAidInformation = document.createElement("div");
+//                 firstAidInformation.setAttribute("id","firstAidInformation");
+//                 firstAid.appendChild(firstAidInformation);
+//                 firstAidInformation.textContent="Szkolenia organizowane przez BAJLEX przeznaczone są dla każdej grupy zawodowej, a także osób indywidualnych chcących uzyskać wiedzę w zakresie udzielania pierwszej pomocy. Dbając o jakość szkoleń, do ich prowadzenia wykorzystujemy prezentacje multimedialne, fantomy oraz defibrylator AED.";
+//                 isExisting=true;
+               
+//                 document.addEventListener("click",function(event){
+//                         if(!firstAidInformation.contains(event.target) && !firstAid.contains(event.target)){
+//                                 firstAidInformation.remove();
+//                                 const isDivExisting6 = document.querySelector('firstAidInformation');
+                                
+//                                 isExisting=false;
+                                
+//                         }
+//                 });
+
+//                 setTimeout(function() {
+//                         firstAidInformation.remove();
+//                     }, 10000);
+//                 }
+                
+                
+//         });
+
+// /**************************FIRST AID END***********************************/
 
 
         const nextIcon = document.createElement("button");
@@ -411,6 +402,7 @@ checkBtn.addEventListener("click",function(){
         offerSite.appendChild(nextIcon);
         
         nextIcon.addEventListener("click",function(){
+                offerSite.style.justifyContent="space-evenly";
                 nextIcon.style.display="none";
                 const nextSection = document.createElement("div");
                 nextSection.setAttribute("id","nextSection");
@@ -497,7 +489,7 @@ checkBtn.addEventListener("click",function(){
                                         instagram.setAttribute("id","instagram");
 
                                         instagram.addEventListener("click",function(){
-                                                window.open("https://www.instagram.com/a_bajkiewicz/", "_blank");
+                                                window.open("https://www.instagram.com/bajlex_bhp/", "_blank");
                                              });
                         
                                 socialMedia.appendChild(facebook);
@@ -520,7 +512,7 @@ checkBtn.addEventListener("click",function(){
 
               
         });
-    });
+   
 
     logo1.addEventListener("click",function(){
         

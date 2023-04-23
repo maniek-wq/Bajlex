@@ -1,10 +1,3 @@
-const link = document.getElementById("logo1");
-
-link.addEventListener("click",function(){
-  window.location.href="index.html";
-});
-
-
 const nav = document.getElementById("navbar");
 window.addEventListener("scroll", function() {
   if (window.pageYOffset > 0) {
@@ -19,7 +12,6 @@ window.addEventListener("scroll", function() {
 });
 
 
-
 const instagram = document.getElementById("instagram");
 const facebook = document.getElementById("facebook");
 instagram.addEventListener("click",function(){
@@ -29,6 +21,3 @@ instagram.addEventListener("click",function(){
      facebook.addEventListener("click",function(){
         window.open("https://www.facebook.com/profile.php?id=100076476510012&sk=services", "_blank");
      });
-
-
-

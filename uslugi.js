@@ -7,9 +7,10 @@ const d = document.getElementById("outsourcing");
 const e = document.getElementById("bhpSupervising");
 const f = document.getElementById("documentation");
 const g = document.getElementById("firstAid");
+const h = document.getElementById("forklift");
 
 a.addEventListener("click",function(){
-                offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
+                
                 if(!isExisting){
                 const fireCourseInformation = document.createElement("div");
                 fireCourseInformation.setAttribute("id","fireCourseInformation");
@@ -20,7 +21,7 @@ a.addEventListener("click",function(){
                         if(!fireCourseInformation.contains(event.target) && !fireCourse.contains(event.target)){
                                 fireCourseInformation.remove();
                                 const isDivExisting = document.querySelector('fireCourseInformation');
-                                if(!isDivExisting){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
+                               
                                 isExisting=false;
                         }
                 
@@ -36,7 +37,7 @@ a.addEventListener("click",function(){
 b.addEventListener("click",function(){
                 
                 if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
+                        
                 const measurementInformation = document.createElement("div");
                 measurementInformation.setAttribute("id","measurementInformation");
                 measurement.appendChild(measurementInformation);
@@ -46,7 +47,7 @@ b.addEventListener("click",function(){
                         if(!measurementInformation.contains(event.target) && !measurement.contains(event.target)){
                                 measurementInformation.remove();
                                 const isDivExisting1 = document.querySelector('measurementInformation');
-                                if(!isDivExisting1){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
+                                
                                 isExisting=false;
                                 
                         }
@@ -62,7 +63,7 @@ b.addEventListener("click",function(){
 c.addEventListener("click",function(){
                 
                 if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
+                       
                 const BHPInformation = document.createElement("div");
                 BHPInformation.setAttribute("id","BHPInformation");
                 BHP.appendChild(BHPInformation);
@@ -72,7 +73,7 @@ c.addEventListener("click",function(){
                         if(!BHPInformation.contains(event.target) && !BHP.contains(event.target)){
                                 BHPInformation.remove();
                                 const isDivExisting2 = document.querySelector('BHPInformation');
-                                if(!isDivExisting2){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
+                               
                                 isExisting=false;
                              
                         }
@@ -88,7 +89,7 @@ c.addEventListener("click",function(){
 d.addEventListener("click",function(){
                 
                 if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
+                        
                 const outsourcingInformation = document.createElement("div");
                 outsourcingInformation.setAttribute("id","outsourcingInformation");
                 outsourcing.appendChild(outsourcingInformation);
@@ -98,7 +99,7 @@ d.addEventListener("click",function(){
                         if(!outsourcingInformation.contains(event.target) && !outsourcing.contains(event.target)){
                                 outsourcingInformation.remove();
                                 const isDivExisting3 = document.querySelector('outsourcingInformation');
-                                if(!isDivExisting3){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
+                               
                                 isExisting=false;
                                
                         }
@@ -114,7 +115,7 @@ d.addEventListener("click",function(){
 e.addEventListener("click",function(){
                 
                 if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
+                        
                 const bhpSupervisingInformation = document.createElement("div");
                 bhpSupervisingInformation.setAttribute("id","bhpSupervisingInformation");
                 bhpSupervising.appendChild(bhpSupervisingInformation);
@@ -124,7 +125,7 @@ e.addEventListener("click",function(){
                         if(!bhpSupervisingInformation.contains(event.target) && !bhpSupervising.contains(event.target)){
                                 bhpSupervisingInformation.remove();
                                 const isDivExisting4 = document.querySelector('bhpSupervisingInformation');
-                                if(!isDivExisting4){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
+                                
                                 isExisting=false;
                                 
                         }
@@ -140,7 +141,7 @@ e.addEventListener("click",function(){
 f.addEventListener("click",function(){
                 
                 if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
+                        
                 const documentationInformation = document.createElement("div");
                 documentationInformation.setAttribute("id","documentationInformation");
                 documentation.appendChild(documentationInformation);
@@ -150,7 +151,7 @@ f.addEventListener("click",function(){
                         if(!documentationInformation.contains(event.target) && !documentation.contains(event.target)){
                                 documentationInformation.remove();
                                 const isDivExisting5 = document.querySelector('documentationInformation');
-                                if(!isDivExisting5){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
+                                
                                 isExisting=false;
                               
                         }
@@ -166,7 +167,7 @@ f.addEventListener("click",function(){
 
 g.addEventListener("click",function(){
                 if(!isExisting){
-                        offerSite.style.backgroundColor="rgba(0, 198, 197, 0.6)";
+                        
                 const firstAidInformation = document.createElement("div");
                 firstAidInformation.setAttribute("id","firstAidInformation");
                 firstAid.appendChild(firstAidInformation);
@@ -177,7 +178,7 @@ g.addEventListener("click",function(){
                         if(!firstAidInformation.contains(event.target) && !firstAid.contains(event.target)){
                                 firstAidInformation.remove();
                                 const isDivExisting6 = document.querySelector('firstAidInformation');
-                                if(!isDivExisting6){offerSite.style.backgroundColor="rgba(0, 198, 197, 1)";}
+                                
                                 isExisting=false;
                                 
                         }
@@ -186,6 +187,34 @@ g.addEventListener("click",function(){
                 setTimeout(function() {
                         firstAidInformation.remove();
                     }, 10000);
+                }
+                
+                
+        });
+
+
+h.addEventListener("click",function(){
+                if(!isExisting){
+                        
+                const forkliftInformation = document.createElement("div");
+                forkliftInformation.setAttribute("id","firstAidInformation");
+                h.appendChild(forkliftInformation);
+                forkliftInformation.textContent="BAJLEX prowadzi szkolenia przygotowujące do zdobycia uprawnień Urzędu Dozoru Technicznego w zakresie obsługi wózków jezdniowych podnośnikowych z wysięgnikiem z wyłączeniem wózków z napędem podnoszenia osoby obsługującej wraz z ładunkiem. Dobieramy najlepsze metody nauki w stosunku do indywidualnych potrzeb kursantów, co pomaga w przygotowaniu się do egzaminu państwowego. Jeżeli masz ukończone 18 lat oraz wykształcenie co najmniej podstawowe, skorzystaj z naszych usług i zdobądź uprawnienia!";
+                isExisting=true;
+               
+                document.addEventListener("click",function(event){
+                        if(!forkliftInformation.contains(event.target) && !h.contains(event.target)){
+                                forkliftInformation.remove();
+                                const isDivExisting6 = document.querySelector('forkliftInformation');
+                                
+                                isExisting=false;
+                                
+                        }
+                });
+
+                setTimeout(function() {
+                        firstAidInformation.remove();
+                    }, 20000);
                 }
                 
                 
@@ -204,3 +233,27 @@ window.addEventListener("scroll", function() {
       navbar.style.opacity="1";
     }
   });
+
+  const nav = document.getElementById("navbar");
+window.addEventListener("scroll", function() {
+  if (window.pageYOffset > 0) {
+    nav.style.opacity=".85";
+    nav.classList.add("shadow");
+    // console.log("sie ruszylo");
+  } else {
+    nav.style.opacity="1";
+    nav.classList.remove("shadow");
+    // console.log("w miejscu")
+  }
+});
+
+
+const instagram = document.getElementById("instagram");
+const facebook = document.getElementById("facebook");
+instagram.addEventListener("click",function(){
+        window.open("https://www.instagram.com/bajlex_bhp/", "_blank");
+     });
+
+     facebook.addEventListener("click",function(){
+        window.open("https://www.facebook.com/profile.php?id=100076476510012&sk=services", "_blank");
+     });
