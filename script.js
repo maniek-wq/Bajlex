@@ -98,8 +98,55 @@ checkBtn.addEventListener("click",function(){
         servicesDivs.setAttribute("id","servicesDivs");
         offerSite.appendChild(servicesDivs);
         servicesDivs.style.whiteSpace="pre-wrap";
-        servicesDivs.textContent="Jesteśmy firmą z wieloletnim doświadczeniem w branży. Posiadamy specjalistów z wieloletnim doświadczeniem i wysokimi kwalifikacjami.\nNasze działania są zawsze sprawne i efektywne, przez co w doskonały sposób rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Bezpieczeństwo, higiena pracy i ochrona przeciwpożarowa, to niezwykle ważny i istotny element każdej firmy. Firma, którą od wielu lat tworzymy, świadczy kompleksową obsługę firm, w zakresie BHP i PPOŻ. Firma Bajlex pojawiła się na rynku w 2005 roku. Od początku istnienia, stawia na wysoką jakość, podtrzymywanie długoletnich relacji z Klientem i pomoc w każdej sytuacji. Organizując szkolenia BHP, staramy się w pełni przekazać naszą wiedzę firmom i instytucjom, by tym samym zapewnić pracownikom jak najlepsze warunki do pracy, przy zachowaniu maksimum bezpieczeństwa.\nZapraszamy do współpracy.\nSkontaktuj się z jednym z naszych specjalistów bhp i p.poż";
+        servicesDivs.textContent="Jesteśmy firmą wykonującą wyspecjalizowane usługi w zakresie BHP, PPOŻ oraz wszelkich zagadnień powiązanych. W szczególności oferujemy kompletną obsługę BHP dla firm - wszelkie aspekty BHP, które dotyczą pracodawcy, tj.: szkolenia BHP, niezbędna dokumentacja BHP, doradztwo prawne w zakresie BHP, inspekcja i nadzór BHP stanowisk pracy. \n\nŚwiadczymy również jednorazowe usługi oraz zlecenia krótkoterminowe. Bajlex to firma z wieloletnim doświadczeniem w branży, nasi specjaliści posiadają kwalifikacje uprawniające do kompleksowej obsługi firm w zakresie BHP i PPOŻ. Rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Nasze usługi obejmują nie tylko zakłady pracy, ale również budownictwo, a wszystkie proponowane przez nas usługi znajdziecie w zakładce „Usługi”. Zapraszamy do współpracy!\n\nOd chwili pojawienia się na rynku w 2005 roku, nasze doświadczenie i profesjonalizm rozwinęły się w trakcie współpracy z firmami działającymi w branży budownictwa, produkcji, oraz szeroko pojętych usług w wielu dziedzinach działalności gospodarczej. Nawiązaliśmy wiele relacji z Klientami, którzy cenią sobie nasze usługi, poniżej przedstawiamy wszystkich, którzy nam zaufali!";
+        const sponsors = document.createElement("div");
+        sponsors.setAttribute("id","sponsors");
+        servicesDivs.appendChild(sponsors);
+        sponsors.style.width="100%";
+        sponsors.style.height="100px";
+        // sponsors.style.border="solid .5px black";
+        const st = document.createElement("div");
+        const nd = document.createElement("div");
+        const rd = document.createElement("div");
+        const th = document.createElement("div");
+        const th1 = document.createElement("div");
+        const th2 = document.createElement("div");
+        const th3 = document.createElement("div");
+        const th4 = document.createElement("div");
+        const th5 = document.createElement("div");
+        const th6 = document.createElement("div");
+        const th7 = document.createElement("div");
+        const th8 = document.createElement("div");
+        const th9 = document.createElement("div");
 
+        st.setAttribute("id","st");
+        nd.setAttribute("id","nd");
+        rd.setAttribute("id","rd");
+        th.setAttribute("id","th");
+        th1.setAttribute("id","th1");
+        th2.setAttribute("id","th2");
+        th3.setAttribute("id","th3");
+        th4.setAttribute("id","th4");
+        th5.setAttribute("id","th5");
+        th6.setAttribute("id","th6");
+        th7.setAttribute("id","th7");
+        th8.setAttribute("id","th8");
+        th9.setAttribute("id","th9");
+        
+
+        sponsors.appendChild(st);
+        sponsors.appendChild(nd);
+        sponsors.appendChild(rd);
+        sponsors.appendChild(th);
+        sponsors.appendChild(th1);
+        sponsors.appendChild(th2);
+        sponsors.appendChild(th3);
+        sponsors.appendChild(th4);
+        sponsors.appendChild(th5);
+        sponsors.appendChild(th6);
+        sponsors.appendChild(th7);
+        sponsors.appendChild(th8);
+        sponsors.appendChild(th9);
 
 /**************************FIRE COURSE***********************************/
 // {
