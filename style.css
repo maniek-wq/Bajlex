@@ -720,7 +720,9 @@ background-position: center;
     #offersite #servicesDivs #sponsors ,#st,#nd,#rd,#th,#th1,#th2,#th3,#th4,#th5,#th6,#th7,#th8{
         display: none;
     }
-    
+    #newSection{
+        background-color: #f4f4f4;
+    }
 
 }
 
