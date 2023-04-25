@@ -701,8 +701,15 @@ background-position: center;
         align-items: center;
         justify-items: center;
     }
+    #container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
     #container #logo{
-        scale:0.8;
+        scale:1;
         width:100%;
         height:270px;
         transform: translateY(100%);
@@ -723,6 +730,10 @@ background-position: center;
     #footer #newSection #newHeader{
         font-size:2rem;
     }
+    #logo1{
+        width:100px;
+        height:200px;
+    }
 
 }
 
@@ -736,7 +747,7 @@ background-position: center;
   }
   
   .line {
-    height: 4px;
+    height: 3px;
     width: 100%;
     background-color: black;
     border-radius: 10px;

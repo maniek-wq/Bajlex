@@ -310,10 +310,10 @@ if(mediaQuery.matches){
                         menu.appendChild(serivceWriting);
                         menu.appendChild(contactWriting);
                         menu.appendChild(newsWriting);
-                         
+                         const firstContainer = document.getElementById("")
                         mainPageWriting.textContent="Strona główna";
                         mainPageWriting.addEventListener("click",function(){
-                            location.reload(firstContainer);
+                                window.location.href="./index.html";
                         });
          
                         serivceWriting.textContent="Usługi";
