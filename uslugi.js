@@ -8,7 +8,7 @@ const e = document.getElementById("bhpSupervising");
 const f = document.getElementById("documentation");
 const g = document.getElementById("firstAid");
 const h = document.getElementById("forklift");
-
+let isExisting1 = false;
 a.addEventListener("click",function(){
                 
                 if(!isExisting){
@@ -257,3 +257,91 @@ instagram.addEventListener("click",function(){
      facebook.addEventListener("click",function(){
         window.open("https://www.facebook.com/profile.php?id=100076476510012&sk=services", "_blank");
      });
+
+
+     const hamburger = document.getElementById("hamburger");
+     const mid = document.getElementById("mid");
+     const contactBtn = document.getElementById("contactBtn");
+     
+     hamburger.addEventListener("click", function () {
+       mid.classList.toggle("active");
+       contactBtn.classList.toggle("active");
+       hamburger.classList.toggle("active");
+     });
+
+let mediaQuery = window.matchMedia("(max-width: 767px)");
+
+const mainPageWriting = document.createElement("a");
+    mainPageWriting.textContent="Strona główna";
+    mainPageWriting.addEventListener("click",function(){
+        location.reload(firstContainer);
+    });
+
+
+    const serivceWriting = document.createElement("a");
+    serivceWriting.textContent="Usługi";
+
+    serivceWriting.addEventListener("click",function(){
+        window.location.href="./uslugi.html";
+    });
+
+
+    const contactWriting = document.createElement("a");
+    contactWriting.textContent="Kontakt";
+    contactWriting.addEventListener("click",function(){
+        window.location.href="./kontakt.html";
+    });
+
+    const newsWriting = document.createElement("a");
+    newsWriting.textContent="Aktualności";
+    newsWriting.addEventListener("click",function(){
+        window.location.href="./new.html";
+    });
+
+
+if(mediaQuery.matches){
+        hamburger.addEventListener("click",function(){
+                if(!isExisting1){
+                        const menu = document.createElement("div");
+                        menu.setAttribute("id","menu");
+                        hamburger.append(menu);
+                        
+                        menu.appendChild(mainPageWriting);
+                        menu.appendChild(serivceWriting);
+                        menu.appendChild(contactWriting);
+                        menu.appendChild(newsWriting);
+                         
+                        mainPageWriting.textContent="Strona główna";
+                        mainPageWriting.addEventListener("click",function(){
+                            location.reload(firstContainer);
+                        });
+         
+                        serivceWriting.textContent="Usługi";
+         
+                        serivceWriting.addEventListener("click",function(){
+                            window.location.href="./uslugi.html";
+                        });
+         
+                        contactWriting.textContent="Kontakt";
+                        contactWriting.addEventListener("click",function(){
+                            window.location.href="./kontakt.html";
+                        });
+         
+                        newsWriting.textContent="Aktualności";
+                        newsWriting.addEventListener("click",function(){
+                            window.location.href="./new.html";
+                        });
+                        isExisting1=true;
+                        document.addEventListener("click",function(event){
+                         if(!menu.contains(event.target)&& !hamburger.contains(event.target)){
+                                 menu.remove();
+                                 isExisting1=false;
+                         }
+                        }); 
+                }else {
+                        const menu = document.getElementById("menu");
+                menu.remove();
+                isExisting1 = false;
+                }
+        });
+}
