@@ -180,6 +180,7 @@ checkBtn.addEventListener("click",function(){
         servicesDivs.textContent="Jesteśmy firmą wykonującą wyspecjalizowane usługi w zakresie BHP, PPOŻ oraz wszelkich zagadnień powiązanych. W szczególności oferujemy kompletną obsługę BHP dla firm - wszelkie aspekty BHP, które dotyczą pracodawcy, tj.: szkolenia BHP, niezbędna dokumentacja BHP, doradztwo prawne w zakresie BHP, inspekcja i nadzór BHP stanowisk pracy. \n\nŚwiadczymy również jednorazowe usługi oraz zlecenia krótkoterminowe. Bajlex to firma z wieloletnim doświadczeniem w branży, nasi specjaliści posiadają kwalifikacje uprawniające do kompleksowej obsługi firm w zakresie BHP i PPOŻ. Rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Nasze usługi obejmują nie tylko zakłady pracy, ale również budownictwo, a wszystkie proponowane przez nas usługi znajdziecie w zakładce „Usługi”. Zapraszamy do współpracy!\n\nOd chwili pojawienia się na rynku w 2005 roku, nasze doświadczenie i profesjonalizm rozwinęły się w trakcie współpracy z firmami działającymi w branży budownictwa, produkcji, oraz szeroko pojętych usług w wielu dziedzinach działalności gospodarczej. Nawiązaliśmy wiele relacji z Klientami, którzy cenią sobie nasze usługi, poniżej przedstawiamy wszystkich, którzy nam zaufali!";
         if (mediaQuery.matches) {
                 servicesDivs.textContent="Jesteśmy firmą wykonującą wyspecjalizowane usługi w zakresie BHP, PPOŻ oraz wszelkich zagadnień powiązanych. W szczególności oferujemy kompletną obsługę BHP dla firm - wszelkie aspekty BHP, które dotyczą pracodawcy, tj.: szkolenia BHP, niezbędna dokumentacja BHP, doradztwo prawne w zakresie BHP, inspekcja i nadzór BHP stanowisk pracy. \n\nŚwiadczymy również jednorazowe usługi oraz zlecenia krótkoterminowe. Bajlex to firma z wieloletnim doświadczeniem w branży, nasi specjaliści posiadają kwalifikacje uprawniające do kompleksowej obsługi firm w zakresie BHP i PPOŻ. Rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Nasze usługi obejmują nie tylko zakłady pracy, ale również budownictwo, a wszystkie proponowane przez nas usługi znajdziecie w zakładce „Usługi”. Zapraszamy do współpracy!\n\nOd chwili pojawienia się na rynku w 2005 roku, nasze doświadczenie i profesjonalizm rozwinęły się w trakcie współpracy z firmami działającymi w branży budownictwa, produkcji, oraz szeroko pojętych usług w wielu dziedzinach działalności gospodarczej. Nawiązaliśmy wiele relacji z Klientami, którzy cenią sobie nasze usługi.";
+                servicesDivs.style.fontSize="1.1rem";
               }
         const sponsors = document.createElement("div");
         sponsors.setAttribute("id","sponsors");
@@ -597,7 +598,7 @@ checkBtn.addEventListener("click",function(){
                               }  
                 const newSection = document.createElement("div");
                 newSection.setAttribute("id", "new-section");
-
+                      
                 const newHeader = document.createElement("h1");
                 newHeader.setAttribute("id","newHeader");
                 newSection.appendChild(newHeader);
