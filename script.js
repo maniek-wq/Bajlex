@@ -2,7 +2,8 @@ const checkBtn = document.getElementById('Check-Btn');
 const firstContainer = document.getElementById("container");
 const logo = document.getElementById('logo');
 let isExisting = false;
-
+let isExisting1 = false;
+let mediaQuery = window.matchMedia("(max-width: 767px)");
 checkBtn.addEventListener("click",function(){
 
     const newScreen = document.createElement("div");
@@ -34,15 +35,7 @@ checkBtn.addEventListener("click",function(){
     navbar.appendChild(mid);
     navbar.appendChild(contactBtn);
     
-    window.addEventListener("scroll", function() {
-        if (window.pageYOffset > 0) {
-          navbar.classList.add("shadow");
-          navbar.style.opacity="0.85";
-        } else {
-          navbar.classList.remove("shadow");
-          navbar.style.opacity="1";
-        }
-      });
+    
 
     contactBtn.textContent="Skontaktuj się!";
     document.body.style.margin="0";
@@ -79,12 +72,98 @@ checkBtn.addEventListener("click",function(){
     mid.appendChild(contactWriting);
     mid.appendChild(newsWriting);
 
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 0 ) {
+          navbar.classList.add("shadow");
+          navbar.style.opacity="0.85";
+        } else {
+          navbar.classList.remove("shadow");
+          navbar.style.opacity="1";
+        }
+       
+      });
+   if(mediaQuery.matches){
+        // mainPageWriting.style.display="remove";
+        // serivceWriting.style.display="none";
+        // contactWriting.style.display="none";
+        // newsWriting.style.display="none";
+        navbar.style.zIndex="999";
+        navbar.style.opacity="1";
+        contactBtn.style.display="none";
+        
+        mid.style.display="none";
+        const hamburger = document.createElement("div");
+        hamburger.classList.add("hamburger");
+        navbar.appendChild(hamburger);
+        const line1 = document.createElement("div");
+        line1.classList.add("line");
 
-   
+        const line2 = document.createElement("div");
+        line2.classList.add("line");
+
+        const line3 = document.createElement("div");
+        line3.classList.add("line");
+
+        hamburger.appendChild(line1);
+        hamburger.appendChild(line2);
+        hamburger.appendChild(line3);
+        
+
+        navbar.style.display="flex";
+        navbar.style.justifyContent="space-evenly";
+        logo1.style.scale="0.8";
+        
+             
+        hamburger.addEventListener("click",function(){
+                if(!isExisting1){ 
+               const menu = document.createElement("div");
+               menu.setAttribute("id","menu");
+               hamburger.append(menu);
+               
+               menu.appendChild(mainPageWriting);
+               menu.appendChild(serivceWriting);
+               menu.appendChild(contactWriting);
+               menu.appendChild(newsWriting);
+                
+               mainPageWriting.textContent="Strona główna";
+               mainPageWriting.addEventListener("click",function(){
+                   location.reload(firstContainer);
+               });
+
+               serivceWriting.textContent="Usługi";
+
+               serivceWriting.addEventListener("click",function(){
+                   window.location.href="./uslugi.html";
+               });
+
+               contactWriting.textContent="Kontakt";
+               contactWriting.addEventListener("click",function(){
+                   window.location.href="./kontakt.html";
+               });
+
+               newsWriting.textContent="Aktualności";
+               newsWriting.addEventListener("click",function(){
+                   window.location.href="./new.html";
+               });
+               isExisting1=true;
+               document.addEventListener("click",function(event){
+                if(!menu.contains(event.target)&& !hamburger.contains(event.target)){
+                        menu.remove();
+                        isExisting1=false;
+                }
+               });   
+                } else {
+                        const menu = document.getElementById("menu");
+                menu.remove();
+                isExisting1 = false;
+                }
+        });
+        
+   }
 
     
         
-        navbar.style.display="flex";
+        
         const offerSite = document.createElement("div");
         offerSite.setAttribute("id","offerSite");
         newScreen.appendChild(offerSite);
@@ -99,6 +178,9 @@ checkBtn.addEventListener("click",function(){
         offerSite.appendChild(servicesDivs);
         servicesDivs.style.whiteSpace="pre-wrap";
         servicesDivs.textContent="Jesteśmy firmą wykonującą wyspecjalizowane usługi w zakresie BHP, PPOŻ oraz wszelkich zagadnień powiązanych. W szczególności oferujemy kompletną obsługę BHP dla firm - wszelkie aspekty BHP, które dotyczą pracodawcy, tj.: szkolenia BHP, niezbędna dokumentacja BHP, doradztwo prawne w zakresie BHP, inspekcja i nadzór BHP stanowisk pracy. \n\nŚwiadczymy również jednorazowe usługi oraz zlecenia krótkoterminowe. Bajlex to firma z wieloletnim doświadczeniem w branży, nasi specjaliści posiadają kwalifikacje uprawniające do kompleksowej obsługi firm w zakresie BHP i PPOŻ. Rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Nasze usługi obejmują nie tylko zakłady pracy, ale również budownictwo, a wszystkie proponowane przez nas usługi znajdziecie w zakładce „Usługi”. Zapraszamy do współpracy!\n\nOd chwili pojawienia się na rynku w 2005 roku, nasze doświadczenie i profesjonalizm rozwinęły się w trakcie współpracy z firmami działającymi w branży budownictwa, produkcji, oraz szeroko pojętych usług w wielu dziedzinach działalności gospodarczej. Nawiązaliśmy wiele relacji z Klientami, którzy cenią sobie nasze usługi, poniżej przedstawiamy wszystkich, którzy nam zaufali!";
+        if (mediaQuery.matches) {
+                servicesDivs.textContent="Jesteśmy firmą wykonującą wyspecjalizowane usługi w zakresie BHP, PPOŻ oraz wszelkich zagadnień powiązanych. W szczególności oferujemy kompletną obsługę BHP dla firm - wszelkie aspekty BHP, które dotyczą pracodawcy, tj.: szkolenia BHP, niezbędna dokumentacja BHP, doradztwo prawne w zakresie BHP, inspekcja i nadzór BHP stanowisk pracy. \n\nŚwiadczymy również jednorazowe usługi oraz zlecenia krótkoterminowe. Bajlex to firma z wieloletnim doświadczeniem w branży, nasi specjaliści posiadają kwalifikacje uprawniające do kompleksowej obsługi firm w zakresie BHP i PPOŻ. Rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Nasze usługi obejmują nie tylko zakłady pracy, ale również budownictwo, a wszystkie proponowane przez nas usługi znajdziecie w zakładce „Usługi”. Zapraszamy do współpracy!\n\nOd chwili pojawienia się na rynku w 2005 roku, nasze doświadczenie i profesjonalizm rozwinęły się w trakcie współpracy z firmami działającymi w branży budownictwa, produkcji, oraz szeroko pojętych usług w wielu dziedzinach działalności gospodarczej. Nawiązaliśmy wiele relacji z Klientami, którzy cenią sobie nasze usługi.";
+              }
         const sponsors = document.createElement("div");
         sponsors.setAttribute("id","sponsors");
         servicesDivs.appendChild(sponsors);
@@ -447,14 +529,21 @@ checkBtn.addEventListener("click",function(){
         const nextIcon = document.createElement("button");
         nextIcon.setAttribute("id","nextIcon");
         offerSite.appendChild(nextIcon);
-        
+        if (mediaQuery.matches) {
+                nextIcon.style.position="fixed";
+                nextIcon.style.bottom="3%";
+                nextIcon.style.transform="translateY(-5%)";
+                nextIcon.style.left="50%";
+                nextIcon.style.transform="translateX(-50%)";
+                nextIcon.style.animation="none";
+                nextIcon.style.opacity="0.8";
+              }
         nextIcon.addEventListener("click",function(){
                 offerSite.style.justifyContent="space-evenly";
                 nextIcon.style.display="none";
                 const nextSection = document.createElement("div");
                 nextSection.setAttribute("id","nextSection");
-                document.body.appendChild(nextSection);
-
+                document.body.appendChild(nextSection);     
                 const newH = document.createElement('div');
                 newH.setAttribute("id","newH");
                 newH.textContent="Współpracując z nami zyskujesz:";
@@ -500,6 +589,12 @@ checkBtn.addEventListener("click",function(){
                         advText2.setAttribute("id","advText2");
                         advText2.textContent="Wiedzę i doświadczenie specjalisty ds. BHP";
 
+                        if (mediaQuery.matches) {
+                                newH.style.display="none";
+                                advantages.style.display="none";
+                                advantage1.display="none";
+
+                              }  
                 const newSection = document.createElement("div");
                 newSection.setAttribute("id", "new-section");
 
@@ -507,7 +602,7 @@ checkBtn.addEventListener("click",function(){
                 newHeader.setAttribute("id","newHeader");
                 newSection.appendChild(newHeader);
                 newHeader.textContent="W celu zapoznania się ze szczegółową ofertą dostosowaną do potrzeb państwa firmy, prosimy o kontakt";
-
+                       
                 const newButton = document.createElement("button");
                 newButton.setAttribute("id","newButton");
                 newSection.appendChild(newButton);
@@ -515,7 +610,7 @@ checkBtn.addEventListener("click",function(){
                 newButton.addEventListener("click",function(){
                         window.location.href="./kontakt.html";
                 });
-
+                
                 const footer = document.createElement("div");
                 footer.setAttribute("id","footer")
                 newSection.appendChild(footer);
@@ -545,7 +640,13 @@ checkBtn.addEventListener("click",function(){
                 const copyright = document.createElement("div");
                         copyright.setAttribute("id","copyright");
                                 copyright.textContent="Bajlex wszystkie prawa zastrzeżone ©";
-
+                                if (mediaQuery.matches) {
+                                        newHeader.style.fontSize="1.5rem";
+                                        newHeader.style.width="100%";
+                                        newHeader.style.height="300px";
+                                        newButton.style.width="200px";
+                                        copyright.style.fontSize="1rem";
+                                      }
                         footer.appendChild(copyright);
                 
                 window.addEventListener("scroll", function() {
@@ -565,3 +666,4 @@ checkBtn.addEventListener("click",function(){
         
     });
 });
+
