@@ -104,7 +104,20 @@ if(mediaQuery.matches){
                spons.addEventListener("click",function(){
                    window.location.href="./sponsors.html";
                });
-
+               isExisting=true;
+                        document.addEventListener("click",function(event){
+                         if(!menu.contains(event.target)&& !hamburger.contains(event.target)){
+                                 menu.remove();
+                                 isExisting=false;
+                         }
+                        }); 
+                        isExisting=true;
+                        document.addEventListener("click",function(event){
+                         if(!menu.contains(event.target)&& !hamburger.contains(event.target)){
+                                 menu.remove();
+                                 isExisting=false;
+                         }
+                        }); 
                 }else {
                         const menu = document.getElementById("menu");
                 menu.remove();
