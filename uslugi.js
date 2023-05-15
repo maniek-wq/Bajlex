@@ -274,7 +274,7 @@ let mediaQuery = window.matchMedia("(max-width: 767px)");
 const mainPageWriting = document.createElement("a");
     mainPageWriting.textContent="Strona główna";
     mainPageWriting.addEventListener("click",function(){
-        location.reload(firstContainer);
+        window.location.href="./index.html";
     });
 
 
@@ -298,6 +298,12 @@ const mainPageWriting = document.createElement("a");
         window.location.href="./new.html";
     });
 
+    const spons = document.createElement("a");
+    spons.textContent="Partnerzy";
+    spons.addEventListener("click",function(){
+        window.location.href="./sponsors.html";
+    });
+
 
 if(mediaQuery.matches){
         hamburger.addEventListener("click",function(){
@@ -310,7 +316,7 @@ if(mediaQuery.matches){
                         menu.appendChild(serivceWriting);
                         menu.appendChild(contactWriting);
                         menu.appendChild(newsWriting);
-                         const firstContainer = document.getElementById("")
+                        menu.appendChild(spons); 
                         mainPageWriting.textContent="Strona główna";
                         mainPageWriting.addEventListener("click",function(){
                                 window.location.href="./index.html";
@@ -331,13 +337,12 @@ if(mediaQuery.matches){
                         newsWriting.addEventListener("click",function(){
                             window.location.href="./new.html";
                         });
-                        isExisting1=true;
-                        document.addEventListener("click",function(event){
-                         if(!menu.contains(event.target)&& !hamburger.contains(event.target)){
-                                 menu.remove();
-                                 isExisting1=false;
-                         }
-                        }); 
+         
+                        spons.textContent="Partnerzy";
+                        spons.addEventListener("click",function(){
+                            window.location.href="./sponsors.html";
+                        });
+         
                 }else {
                         const menu = document.getElementById("menu");
                 menu.remove();

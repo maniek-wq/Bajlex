@@ -66,11 +66,18 @@ checkBtn.addEventListener("click",function(){
     newsWriting.addEventListener("click",function(){
         window.location.href="./new.html";
     });
+
+    const spons = document.createElement("a");
+    spons.textContent="Partnerzy";
+    spons.addEventListener("click",function(){
+        window.location.href="./sponsors.html";
+    });
       
     mid.appendChild(mainPageWriting);
     mid.appendChild(serivceWriting);
     mid.appendChild(contactWriting);
     mid.appendChild(newsWriting);
+    mid.appendChild(spons);
 
     window.addEventListener("scroll", function() {
         if (window.pageYOffset > 0 ) {
@@ -124,7 +131,7 @@ checkBtn.addEventListener("click",function(){
                menu.appendChild(serivceWriting);
                menu.appendChild(contactWriting);
                menu.appendChild(newsWriting);
-                
+               menu.appendChild(spons); 
                mainPageWriting.textContent="Strona główna";
                mainPageWriting.addEventListener("click",function(){
                    location.reload(firstContainer);
@@ -145,6 +152,15 @@ checkBtn.addEventListener("click",function(){
                newsWriting.addEventListener("click",function(){
                    window.location.href="./new.html";
                });
+
+               spons.textContent="Partnerzy";
+               spons.addEventListener("click",function(){
+                   window.location.href="./sponsors.html";
+               });
+
+
+
+
                isExisting1=true;
                document.addEventListener("click",function(event){
                 if(!menu.contains(event.target)&& !hamburger.contains(event.target)){
@@ -177,7 +193,7 @@ checkBtn.addEventListener("click",function(){
         servicesDivs.setAttribute("id","servicesDivs");
         offerSite.appendChild(servicesDivs);
         servicesDivs.style.whiteSpace="pre-wrap";
-        servicesDivs.textContent="Jesteśmy firmą wykonującą wyspecjalizowane usługi w zakresie BHP, PPOŻ oraz wszelkich zagadnień powiązanych. W szczególności oferujemy kompletną obsługę BHP dla firm - wszelkie aspekty BHP, które dotyczą pracodawcy, tj.: szkolenia BHP, niezbędna dokumentacja BHP, doradztwo prawne w zakresie BHP, inspekcja i nadzór BHP stanowisk pracy. \n\nŚwiadczymy również jednorazowe usługi oraz zlecenia krótkoterminowe. Bajlex to firma z wieloletnim doświadczeniem w branży, nasi specjaliści posiadają kwalifikacje uprawniające do kompleksowej obsługi firm w zakresie BHP i PPOŻ. Rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Nasze usługi obejmują nie tylko zakłady pracy, ale również budownictwo, a wszystkie proponowane przez nas usługi znajdziecie w zakładce „Usługi”. Zapraszamy do współpracy!\n\nOd chwili pojawienia się na rynku w 2005 roku, nasze doświadczenie i profesjonalizm rozwinęły się w trakcie współpracy z firmami działającymi w branży budownictwa, produkcji, oraz szeroko pojętych usług w wielu dziedzinach działalności gospodarczej. Nawiązaliśmy wiele relacji z Klientami, którzy cenią sobie nasze usługi, poniżej przedstawiamy wszystkich, którzy nam zaufali!";
+        servicesDivs.textContent="Jesteśmy firmą wykonującą wyspecjalizowane usługi w zakresie BHP, PPOŻ oraz wszelkich zagadnień powiązanych. W szczególności oferujemy kompletną obsługę BHP dla firm - wszelkie aspekty BHP, które dotyczą pracodawcy, tj.: szkolenia BHP, niezbędna dokumentacja BHP, doradztwo prawne w zakresie BHP, inspekcja i nadzór BHP stanowisk pracy. \n\nŚwiadczymy również jednorazowe usługi oraz zlecenia krótkoterminowe. Bajlex to firma z wieloletnim doświadczeniem w branży, nasi specjaliści posiadają kwalifikacje uprawniające do kompleksowej obsługi firm w zakresie BHP i PPOŻ. Rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Nasze usługi obejmują nie tylko zakłady pracy, ale również budownictwo, a wszystkie proponowane przez nas usługi znajdziecie w zakładce „Usługi”. Zapraszamy do współpracy!\n\nOd chwili pojawienia się na rynku w 2005 roku, nasze doświadczenie i profesjonalizm rozwinęły się w trakcie współpracy z firmami działającymi w branży budownictwa, produkcji, oraz szeroko pojętych usług w wielu dziedzinach działalności gospodarczej. Nawiązaliśmy wiele relacji z Klientami, którzy cenią sobie nasze usługi, poniżej przedstawiamy partnerów, którzy nam zaufali, możecie również zajrzeć do zakładki „Partnerzy”, gdzie znajdziecie wszystkich naszych partnerów!";
         if (mediaQuery.matches) {
                 
                 servicesDivs.textContent = "O FIRMIE \n\nJesteśmy firmą wykonującą wyspecjalizowane usługi w zakresie BHP, PPOŻ oraz wszelkich zagadnień powiązanych. W szczególności oferujemy kompletną obsługę BHP dla firm - wszelkie aspekty BHP, które dotyczą pracodawcy, tj.: szkolenia BHP, niezbędna dokumentacja BHP, doradztwo prawne w zakresie BHP, inspekcja i nadzór BHP stanowisk pracy. \n\nŚwiadczymy również jednorazowe usługi oraz zlecenia krótkoterminowe. Bajlex to firma z wieloletnim doświadczeniem w branży, nasi specjaliści posiadają kwalifikacje uprawniające do kompleksowej obsługi firm w zakresie BHP i PPOŻ. Rozwiązujemy problemy dużych przedsiębiorstw jak i mniejszych, kilku osobowych firm na trenie Polski i za granicą. Nasze usługi obejmują nie tylko zakłady pracy, ale również budownictwo, a wszystkie proponowane przez nas usługi znajdziecie w zakładce „Usługi”. Zapraszamy do współpracy!\n\nOd chwili pojawienia się na rynku w 2005 roku, nasze doświadczenie i profesjonalizm rozwinęły się w trakcie współpracy z firmami działającymi w branży budownictwa, produkcji, oraz szeroko pojętych usług w wielu dziedzinach działalności gospodarczej. Nawiązaliśmy wiele relacji z Klientami, którzy cenią sobie nasze usługi.";
