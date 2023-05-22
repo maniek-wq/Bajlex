@@ -47,7 +47,7 @@ if(mediaQuery.matches){
                         menu.appendChild(spons); 
                         mainPageWriting.textContent="Strona główna";
                         mainPageWriting.addEventListener("click",function(){
-                            location.reload(firstContainer);
+                            window.location.href="./index.html";
                         });
          
                         serivceWriting.textContent="Usługi";
