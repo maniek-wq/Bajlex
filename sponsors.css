@@ -326,6 +326,7 @@ h3{
     justify-content: center;
     place-items: center;
     gap: 50px;
+    /* background-color: #f9f9f9; */
   }
  .logos{
 
@@ -336,12 +337,14 @@ h3{
   height: max-content;
   transform: translateY(1200px);
   gap:20px;
-  z-index: -1;
+  z-index: 1;
   
  }
  .logos img{
   mix-blend-mode: color-burn;
   object-fit: contain;
+  /* background-color: #f9f9f9; */
+ 
  }
 
  #navbar #mid,#contactBtn{

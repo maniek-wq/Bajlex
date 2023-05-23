@@ -345,7 +345,9 @@ p{
     width:100px;
     
 }
-  
+  #footer{
+    height:20vh;
+  }
 }
 
 #menu{
