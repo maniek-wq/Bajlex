@@ -2,7 +2,7 @@ const nav = document.getElementById("navbar");
 const link = document.getElementById("logo1");
 
 link.addEventListener("click",function(){
-  window.location.href="index.html";
+    window.location.href="./main.html";
 });
 let isExisting = false;
 window.addEventListener("scroll", function() {
@@ -33,7 +33,7 @@ instagram.addEventListener("click",function(){
      const mainPageWriting = document.createElement("a");
          mainPageWriting.textContent="Strona główna";
          mainPageWriting.addEventListener("click",function(){
-          window.location.href="./index.html";
+            window.location.href="./main.html";
          });
      
      

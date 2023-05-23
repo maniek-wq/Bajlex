@@ -2,7 +2,7 @@ let isExisting = false;
 const link = document.getElementById("logo1");
 
 link.addEventListener("click",function(){
-  window.location.href="index.html";
+  window.location.href="./main.html";
 });
 
 
@@ -36,7 +36,7 @@ let mediaQuery = window.matchMedia("(max-width: 767px)");
 const mainPageWriting = document.createElement("a");
     mainPageWriting.textContent="Strona główna";
     mainPageWriting.addEventListener("click",function(){
-      window.location.href="./index.html";
+      window.location.href="./main.html";
     });
 
 
@@ -81,7 +81,7 @@ if(mediaQuery.matches){
 
                mainPageWriting.textContent="Strona główna";
                mainPageWriting.addEventListener("click",function(){
-                window.location.href="./index.html";
+                window.location.href="./main.html";
                });
 
                serivceWriting.textContent="Usługi";
