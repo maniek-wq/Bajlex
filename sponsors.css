@@ -331,7 +331,7 @@ h3{
     justify-content: center;
     place-items: center;
     gap: 50px;
-    /* background-color: #f9f9f9; */
+    
   }
  .logos{
 
@@ -360,7 +360,7 @@ h3{
   flex-direction: column;
   width:100%;
   height:400vh;
-  
+  background-color: #f9f9f9; 
 }
 #hamburger {
 display: flex;
