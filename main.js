@@ -39,7 +39,7 @@ let mediaQuery = window.matchMedia("(max-width: 767px)");
 const mainPageWriting = document.createElement("a");
     mainPageWriting.textContent="Strona główna";
     mainPageWriting.addEventListener("click",function(){
-        window.location.href="./main.html";
+        window.location.href="./index.html";
     });
 
 
@@ -84,7 +84,7 @@ if(mediaQuery.matches){
                         menu.appendChild(spons); 
                         mainPageWriting.textContent="Strona główna";
                         mainPageWriting.addEventListener("click",function(){
-                                window.location.href="./main.html";
+                                window.location.href="./index.html";
                         });
          
                         serivceWriting.textContent="Usługi";
