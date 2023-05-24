@@ -176,7 +176,7 @@ a:visited{
 }
 #writing{
   width:100%;
-  transform: translateX(50px);
+  padding-left: 30px;
 }
 #left{
   width:500px;

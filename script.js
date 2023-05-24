@@ -111,7 +111,7 @@ if(mediaQuery.matches){
                         document.addEventListener("click",function(event){
                          if(!menu.contains(event.target)&& !hamburger.contains(event.target)){
                                  menu.remove();
-                                 isExisting=false;
+                                 isExisting1=false;
                          }
                         }); 
                 }else {
