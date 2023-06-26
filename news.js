@@ -4,7 +4,7 @@ const link = document.getElementById("logo1");
 link.addEventListener("click",function(){
     window.location.href="./index.html";
 });
-let isExisting = false;
+let isExisting1 = false;
 window.addEventListener("scroll", function() {
   if (window.pageYOffset > 0) {
     nav.style.opacity=".85";

@@ -1,4 +1,4 @@
-let isExisting = false;
+let isExisting1 = false;
 let mediaQuery = window.matchMedia("(max-width: 767px)");
 const mainPageWriting = document.createElement("a");
     mainPageWriting.textContent="O nas";

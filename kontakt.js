@@ -1,4 +1,4 @@
-let isExisting = false;
+let isExisting1 = false;
 const link = document.getElementById("logo1");
 
 link.addEventListener("click",function(){
