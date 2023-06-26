@@ -1,223 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-}
-
-#offerSite{
-    width:100%;
-    height:80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    justify-items: center;
-    background-color:#f9f9f9;
-    
-}
-#gora{
-    width:100%;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    justify-items: center;
-    
-    margin-top:7%;
-
-}
-
-#dol{
-    width:100%;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    justify-items: center;
-    margin-bottom: 5%;
-}
-h1{
-    font-size: 96px;
-    color:#FCEA3B;
-    font-weight: bold;
-    text-align: center;
-}
-
-#nextIcon{
-    width:65px;
-    height:65px;
-    background-image: url("img/4569411-200-removebg-preview.png");
-    background-size: cover;
-    border:none;
-    background-color: white;
-    border-radius: 100px;
-    border-style: hidden;
-    animation: slide 1s ease-in infinite;
-    
-}
-
-#nextIcon:hover {
-    transform: translateY(6px);
-    -webkit-box-shadow: inset 0px 0px 10px -1px rgba(66, 68, 90, 1);
-    -moz-box-shadow: inset 0px 0px 10px -1px rgba(66, 68, 90, 1);
-    box-shadow: inset 0px 0px 10px -1px rgba(66, 68, 90, 1);
-}
-
-@keyframes slide{
-    0%{
-        transform:translateY(0px);
-    }
-    50%{
-        transform:translateY(20px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-#servicesDivs{
-    width:100%;
-    height:200px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-
-#fireCourseText,#measurementText,#BHPText,#outsourcingText,#bhpSupervisingText,#documentationText,#firstAidText,#forkliftText
-{
-    font-weight: bold;
-    color:black;
-}
-#fireCourseIcon,#measurementIcon,#BHPIcon,#outsourcingIcon,#bhpSupervisingIcon,#documentationIcon,#firstAidIcon,#forkliftIcon{
-width:195px;
-height:180px;
-border-radius: 30px;
-box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.25);
-
-}
-
-#fireCourseIcon:hover,#measurementIcon:hover,#BHPIcon:hover,#outsourcingIcon:hover,#bhpSupervisingIcon:hover,#documentationIcon:hover,#firstAidIcon:hover,#forkliftIcon:hover{
-    
-    -webkit-box-shadow: inset 0px 0px 31px -1px rgba(66, 68, 90, 1);
-    -moz-box-shadow: inset 0px 0px 31px -1px rgba(66, 68, 90, 1);
-    box-shadow: inset 0px 0px 31px -1px rgba(66, 68, 90, 1);
-    
-    }
-
-#fireCourseIcon{
-    background-image: url("img/campfire-icon-.jpg");
-    background-size: cover;
-    background-position: center;
-}
-#fireCourse,#measurement,#BHP,#outsourcing,#bhpSupervising,#documentation,#firstAid,#forklift{
-   
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    justify-items: center;
-    flex-direction: column;
-    gap:15px;
-    width:300px;
-    height:200px;
-    
-}
-
-#measurementIcon{
-    background-image: url("img/pomiary-removebg-preview.png");
-    background-size: cover;
-    background-position: center;
-    background-color: white;
-}
-
-#BHPIcon{
-    background-image: url("img/x1-coe-talent-management-2.png.pagespeed.ic_.KD-mnWOYeb-2.png");
-    background-size: cover;
-    background-position: center;
-}
-
-#outsourcingIcon{
-    background-image: url("img/outsourcing-icon-outsourcing-icon-symbol-business-illustration-on-isolated-background-vector.webp");
-    background-size: cover;
-    background-position: center;
-    
-}
-
-
-#bhpSupervisingIcon{
-    background-image: url("img/b.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#documentationIcon{
-    background-image: url("img/depositphotos_96280286-stock-illustration-medical-records-icon.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-#firstAidIcon{
-    background-image: url("img/istockphoto-1158611058-612x612.jpg");
-    background-size: cover;
-    background-position: center;
-}
-#forkliftIcon{
-    background-image: url("img/wozek.png");
-    background-size: cover;
-    background-position: center;
-    background-color: white;
-}
-
-#fireCourseInformation,#measurementInformation,#BHPInformation,#outsourcingInformation,#bhpSupervisingInformation,#documentationInformation,#firstAidInformation,#forkliftInformation{
-    width:300px;
-    height:450px;
-    position: fixed;
-    left:50%;
-    transform: translateX(-50%);
-    top:30%;
-    z-index: 999;
-    background-color: white;
-    opacity:.95;
-    border-radius: 15px;
-    box-shadow: 1px 3px 5px 3px rgba(0,0,0,0.25);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    font-weight: bold;
-    
-}
-
-
-
-#navbar{
-    width:100%;
-    height:70px;
-    background-color: white;
-    display:flex;
-    position: fixed;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
-    top:0;
-    left:0;
-}
-#navbar.shadow {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  #logo1{
-    height:100%;
-    width:150px;
-    justify-content: space-between;
-    /* margin-top: 10px; */
-    background-image: url("img/logo.png");
-    background-size: cover;
-    background-position: center;
+    margin:0;
     
 }
 ::-webkit-scrollbar {
@@ -231,21 +15,49 @@ box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.25);
   ::-webkit-scrollbar-thumb {
     background-color: #cacaca;
   }
-
-
-#mid{
-    width:500px;
-    display: flex;
+#navbar{
+    width:100%;
+    height:70px;
+    background-color: white;
+    display:flex;
+    position: fixed;
     justify-content: space-around;
     justify-items: center;
     align-items: center;
-    font-weight: bold;
-    
+    top:0;
+   z-index: 999;
+
+}
+#navbar.shadow{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#logo1{
+  height:100%;
+  width:150px;
+    background-image: url("img/logo.png");
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+}
+
+#mid{
+  width:500px;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  font-weight: bold;
+  
+}
+
+#hamburger{
+  display: none;
 }
 
 #contactBtn{
     border:none;
-    background-color: #1db4f5 ;
+    background-color: #47bef1;
     color:white;
     height:50px;
     padding:3px 3px;
@@ -257,10 +69,13 @@ box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.25);
     display:grid;
     place-items: center;
 }
+
+#contactBtn:hover{
+    background-color: #71ccf3;
+}
 #contactBtn a{
     color:white;
 }
-
 #contactBtn a:after {
     content: "";
     position: absolute;
@@ -277,7 +92,6 @@ box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.25);
     transform: scaleX(1);
   }
 
-
 #contactBtn:hover{
     background-color: #47bef1;
 }
@@ -288,7 +102,6 @@ a{
     position: relative;
     display: inline-block;
 }
-
 
 a:after {
     content: "";
@@ -305,229 +118,506 @@ a:after {
   a:hover:after {
     transform: scaleX(1);
   }
-
 a:visited{
     color:black;
 }
 
-
-
-h3{
-    color:black;
+.container{
+  width:100%;
+  height:240vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap:100px;
+  background-color: white;
+  
 }
+
+#first{
+  width:100%;
+  height:110vh;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: white;
+}
+#backGround{
+  height:100%;
+  width:100%;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  background-image: url("img/BajlexTło.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  opacity:0.05;
+  background-color: white;
+  
+}
+#firm{
+  font-size: 3rem;
+ text-align: center;
+  font-weight: 900;
+}
+#text{
+  text-align: center;
+  width:80%;
+  font-size: 18px;
+  font-weight: 600;
+  animation: load 1.5s ease-in-out;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+#continue{
+  height:130vh;
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  background-color: #F9F9F9;
+  flex-wrap: wrap;
+  
+}
+#writing{
+  width:100%;
+  padding-left: 30px;
+  transform: translateY(200px);
+}
+#left{
+  width:500px;
+  height:400px;
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  
+}
+#mid1{
+  width:500px;
+  height:400px;
+  
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  
+}
+#right{
+  width:500px;
+  height:400px;
+ 
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  
+}
+
 #footer{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-items: center;
-    height:20vh;
+  background-color: #FFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  height:30vh;
 }
+
 #socialMedia{
-    display: flex;
-    flex-direction: row;
-    gap:30px;
+  display: flex;
+  flex-direction: row;
+  gap:30px;
 }
 
 #facebook{
-    width:60px;
-    height:60px;
-    background-image: url("img/fb1.png");
-    background-size: cover;
-    background-position: center;
-    
+  width:60px;
+  height:60px;
+  background-image: url("img/fb1.png");
+  background-size: cover;
+  background-position: center;
+  
 }
 
 #facebook:hover{
-   border-radius: 30px;
-   
-   animation: topUp 0.1s ease-in forwards;
+ border-radius: 30px;
+ 
+ animation: topUp 0.1s ease-in forwards;
 }
 
 #instagram{
-    width:60px;
-    height:60px;
-    background-image: url("img/ig1.png");
-    background-size: cover;
-    background-position: center;
+  width:60px;
+  height:60px;
+  background-image: url("img/ig1.png");
+  background-size: cover;
+  background-position: center;
 }
 #instagram:hover{
-    
-    border-radius: 30px;
-    animation: topUp 0.1s ease-in forwards;
- }
+  
+  border-radius: 30px;
+  animation: topUp 0.1s ease-in forwards;
+}
 
- @keyframes topUp{
-    0%{
-        transform:translateY(0px);
-    }
-    100%{
-        transform:translateY(-10px);
-    }
+@keyframes topUp{
+  0%{
+      transform:translateY(0px);
+  }
+  100%{
+      transform:translateY(-10px);
+  }
+ 
+}
+@keyframes load{
+  0%{
+      transform:translateY(300px);
+      opacity:0.8;
+  }
+  50%{
+      opacity:0.9;
+  }
+  100%{
+      transform:translateY(0px);
+      opacity:1;
+  }
+
+  
+}
+#myLine{
+  display: none;
+}
+#myImg{
+  width:120px;
+  height:157px;
+  background-image: url("img/timer.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  
+}
+
+#myImg1{
+  width:160px;
+height:157.14px;
+background-image: url("img/status.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
    
 }
 
-.sponsors{
-    width:100%;
-    height:200px;
-    background-color: #ffff;
-    color:#0000;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+#myImg2{
+  width:179px;
+  height:157.14px;
+  background-image: url("img/book.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  
+}
+#myImgText, #myImgText1, #myImgText2{
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
-p{
-    color:black;
-    font-size: 1rem;
-    font-weight: 800;
+#hamburger .line {
+  width: 30px;
+  height: 3px;
+  width: 40px;
+  background-color: black;
+  margin: 4px;
 }
-.logos{
+#menu{
+  width:250px;
+  height:300px;
+  background-color: #f9f9f9;
+  border:solid 0.5px black;
+  border-radius: 10px;
+  z-index: 999;
+  position: fixed;
+  left:60%;
+  transform: translateX(-60%);
+  top:6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-items: center;
+  color:black;
+  font-weight: bold;
+}
+
+/* ======================\/ MEDIA QUERIES \/ ====================*/
+
+
+
+
+
+/*================== SIMPLE TABLETS/LAPTOPS ====================*/
+
+@media  screen and (max-width:950px) {
+  #right{
+   width:100px;
+   background-color: #F9F9F9;
+  
+  }
+  #mid1{
+    width:100px;
+    background-color: #F9F9F9;
     
+  }
+  #left{
+    width:100px;
+    background-color: #F9F9F9;
+  }
+  .container{
+    background-color: white;
+    height:250vh;
+  }
+  #continue{
+    background-color: #F9F9F9;
+  }
+  #footer{
+    background-color: white;
+  }
+  #text{
+    font-size: 18px;
+  }
+  #myImgText,#myImgText1,#myImgText2{
+    font-size: 14px;
+    width:max-content;
+  }
+ }
+ @media  screen and (max-width:1350px) {
+  #right{
+   width:100px;
+   background-color: #F9F9F9;
+  
+  }
+  #mid1{
+    width:100px;
+    background-color: #F9F9F9;
+    
+  }
+  #left{
+    width:100px;
+    background-color: #F9F9F9;
+  }
+  .container{
+    background-color: white;
+    height:250vh;
+  }
+  #continue{
+    background-color: #F9F9F9;
+  }
+  #footer{
+    background-color: white;
+  }
+  #text{
+    font-size: 18px;
+  }
+  #myImgText,#myImgText1,#myImgText2{
+    font-size: 18px;
+    width:max-content;
+  }
+ }
+ @media only screen   
+and (min-width: 1030px)   
+and (max-width: 1366px)  
+{ 
+  .container{
+    gap:0;
+  }
+  #first{
     width:100%;
+    height:120vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-img{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: #F9F9F9;
+  }
+
+  #text{
+    text-align: center;
+    width:80%;
+    font-size: 16px;
+    font-weight: 600;
     
-    border-radius: 8px;
-    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  #writing{
+    width: 100%;
+    padding-left: 30px;
+     transform: translateY(0);
+  }
+} 
+
+/*================== SIMPLE TABLETS/LAPTOPS ====================*/
+
+
+
+/* =================== VERTICAL ===================*/
+
+ @media screen and (max-width: 420px)and (max-height: 750px) {
+  #logo1{  
+    width:100px;
+}
+ #navbar #mid,#contactBtn{
+  display: none;
 }
 
 #hamburger {
-    display: none;
+display: flex;
+cursor: pointer;
+flex-direction: column;
+}
+
+#navbar {
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+}
+
+#backGround{
+display: none;
+  
+}
+.container{
+  
+  background-repeat: none;
+  background-image: none;
+  max-height: 130vh;
+}
+#continue{
+  display: none;
+}
+
+  #navbar{
+   z-index: 999;
+  }
+
+#continue{
+  display: none;
+}
+
+
+#text{
+  width:100%;
+}
+
+#text p{
+  font-size: 14px;
+}
+
+#footer{
+  height:50vh;
+  gap:0;
+}
+ #first{
+  transform: translateY(50px);
+} 
+
+}
+@media  screen and (max-width:400px) {
+
+  #logo1{  
+    width:100px;
+}
+ #navbar #mid,#contactBtn{
+  display: none;
+}
+
+#hamburger {
+display: flex;
+cursor: pointer;
+flex-direction: column;
+}
+
+#navbar {
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+}
+
+#logo1{
+  
+  width:100px;
+  
+}
+#backGround{
+display: none;
+  
+}
+.container{
+  height:max-content;
+  background-repeat: none;
+  background-image: none;
+  max-height: 150vh;
+}
+#continue{
+  display: none;
+}
+
+  #navbar{
+   z-index: 999;
+  }
+  #text{
+    width:100%;
+  }
+  #text p{
+    font-size: 14px;
+  }
+
+  #first{
+    transform: translateY(50px);
+    gap:30px;
   }
   
-  #hamburger .line {
-    width: 30px;
-    height: 3px;
-    width: 40px;
-    background-color: black;
-    margin: 4px;
+ }
+@media screen and (max-width:320px){
+  .container{
+    height:150vh;
   }
-
-@media screen and (max-width:767px){
-    #offerSite{
-        height:max-content;
-        gap:0;
-    }
-    #gora,#dol{
-        flex-direction: column;
-        margin-top:30%;
-        height:max-content;
-        gap:20px;
-    }
-    #footer{
-        
-    }
-    .sponsors{
-        height:50vh;
-    }
-    .logos{
-       height:250px;
-        flex-wrap: wrap;
-        width:100%;
-    }
-    
-    #navbar #mid,#contactBtn{
-        display: none;
-    }
-
-    #mid,
-    #contactBtn {
-      display: none;
-    }
-    #hamburger {
-      display: flex;
-      cursor: pointer;
-      flex-direction: column;
-    
-     
-    }
-    #navbar {
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-    #logo1{
-        
-        width:100px;
-        
-    }
-#offerSite #fireCourse,
-#measurement,
-#BHP,
-#outsourcing{
-    width:70%;
-    height:400px;
-}
-
-#offerSite #fireCourseIcon,
-#measurementIcon,
-#BHPIcon,
-#outsourcingIcon{
-    width:100%;
-    height:100%;
-}
-#measurementIcon{
-    background-image: url("img/measure.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#BHPIcon{
-    background-image: url("img/szkolenie-bhp-lodz-okresowe-pracodawcy-kadra-kierownicza-inzynieryjno-techniczna-administracyjno-biurowi-300x225-removebg-preview.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
-#offerSite  #bhpSupervising,
-#documentation,
-#firstAid,
-#forklift{
-    width:70%;
-    height:400px;
-} 
-
-#bhpSupervisingIcon{
-    background-image: url("img/b.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#offerSite  #bhpSupervisingIcon,
-#documentationIcon,
-#firstAidIcon,
-#forkliftIcon{
-    width:100%;
-    height:100%;
-    background-size: cover;
-} 
-.sponsors{
-    display: none;
-}
-
-}
-
-#menu{
-    width:250px;
-    height:300px;
-    background-color: #f9f9f9;
-    border:solid 0.5px black;
-    border-radius: 10px;
-    z-index: 999;
-    position: fixed;
-    left:60%;
-    transform: translateX(-60%);
-    top:6%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    justify-items: center;
-    color:black;
-    font-weight: bold;
+  #footer h3{
+    font-size: 12px;
   }
+}
+
+/* =================== VERTICAL ===================*/
+
+
+
+/* ================= HORIZONTAL TRY OUT ===========================*/
+
+@media screen and (max-width: 812px)and (max-height: 400px) {
+
+}
+
+/* ================= HORIZONTAL TRY OUT ===========================*/

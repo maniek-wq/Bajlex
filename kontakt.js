@@ -6,18 +6,6 @@ link.addEventListener("click",function(){
 });
 
 
-const nav = document.getElementById("navbar");
-window.addEventListener("scroll", function() {
-  if (window.pageYOffset > 0) {
-    nav.style.opacity=".85";
-    nav.classList.add("shadow");
-    // console.log("sie ruszylo");
-  } else {
-    nav.style.opacity="1";
-    nav.classList.remove("shadow");
-    // console.log("w miejscu")
-  }
-});
 
 
 
@@ -81,7 +69,7 @@ if(mediaQuery.matches){
 
                mainPageWriting.textContent="Strona główna";
                mainPageWriting.addEventListener("click",function(){
-                window.location.href="./main.html";
+                window.location.href="./index.html";
                });
 
                serivceWriting.textContent="Usługi";
@@ -125,3 +113,18 @@ if(mediaQuery.matches){
                 }
         });
 }
+
+
+const nav = document.getElementById("navbar");
+window.addEventListener("scroll", function() {
+  if (window.pageYOffset > 0) {
+    nav.style.opacity=".85";
+    nav.classList.add("shadow");
+    nav.style.zIndex="999";
+    // console.log("sie ruszylo");
+  } else {
+    nav.style.opacity="1";
+    nav.classList.remove("shadow");
+    // console.log("w miejscu")
+  }
+});

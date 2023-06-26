@@ -128,28 +128,18 @@ body{
 }
 .cont{
     width:100%;
+    height:100vh;
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 10%;
-    gap:30px;
+    
 }
 h1{
     font-size: 80px;
 }
-.content{
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    gap:20px;
-    padding: 50px;
-    
-}
+
 
 #footer{
    
@@ -166,7 +156,7 @@ h3{
     justify-content: space-evenly;
     justify-items: center;
     align-items: center;
-    height:20vh;
+    height:25vh;
     
     
 }
@@ -213,34 +203,29 @@ h3{
     }
    
 }
-/* .sponsors{
-    width:100%;
-    height:200px;
-    background-color: #ffff;
-    color:#0000;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-} */
+@keyframes load{
+    0%{
+        transform:translateY(300px);
+        opacity:0.8;
+    }
+    50%{
+        opacity:0.9;
+    }
+    100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+    
+}
+
 
 p{
     color:black;
     font-size: 1rem;
     font-weight: 800;
 }
-/* .logos{
-    
-    width:100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-img{
-    
-    border-radius: 8px;
-    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
-} */
+
 #hamburger {
     display: none;
   }
@@ -252,57 +237,7 @@ img{
     background-color: black;
     margin: 4px;
   }
-@media  screen and (max-width:767px) {
-    
-   
-    #kontaktHeader{
-        font-size: 3rem;
-        text-align: center;
-        width:100%;
-    }
-    
-    #ikony{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-        height: max-content;
-        gap:50px;
-    }
-   
-    .sponsors{
-        display: none;
-    }
 
-  
-   #navbar #mid,#contactBtn{
-    display: none;
-}
-
-
-#hamburger {
-  display: flex;
-  cursor: pointer;
-  flex-direction: column;
-
- 
-}
-#navbar {
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#logo1{
-    
-    width:100px;
-    
-}
-
-#news{
-    font-size: 3rem;
-    margin-top: 20%;
-}
-  
-}
 
 #menu{
     width:250px;
@@ -323,3 +258,235 @@ img{
     color:black;
     font-weight: bold;
   }
+
+
+  .content{
+    width:100%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height:50vh;
+    gap:50px;
+   
+}
+  .left{
+    width:800px;
+    height:300px;
+    text-align: left;
+    white-space: pre-wrap;
+    animation: load 2s ease-in-out;
+    font-weight: 600;
+  }
+  .right{
+    width:730px;
+    height:400px;
+    background-image: url("img/59251.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 0px 44px 3px rgba(66, 68, 90, 1);
+-moz-box-shadow: 0px 0px 44px 3px rgba(66, 68, 90, 1);
+box-shadow: 0px 0px 44px 3px rgba(66, 68, 90, 1);
+   z-index: 0;
+    border-radius: 15px;
+    animation: load 1.5s ease-in-out;
+  }
+
+  .left p{
+    font-size: 18px;
+  }
+
+/* ================== MEDIA QUERIES =====================*/
+
+  @media  screen and (max-width:767px) {
+    .cont{
+     height:150vh;  
+     display: flex;
+     flex-wrap: wrap;
+      justify-content: flex-start;
+     align-items: center;
+     justify-items: center; 
+     transform: translateY(100px);
+     z-index: -1;
+ }
+    
+     .cont .content{
+     width:80%; 
+     
+     display: flex;
+     flex-wrap: wrap;
+     z-index: -1;
+    } 
+ 
+    .cont .content .left {
+     font-size: 16px;
+     z-index: -1;
+    }
+     #kontaktHeader{
+         font-size: 3rem;
+         text-align: center;
+         width:100%;
+     }
+     
+     #ikony{
+         display: flex;
+         flex-direction: column;
+         width:100%;
+         height: max-content;
+         gap:50px;
+     }
+    
+    
+ 
+   
+    #navbar #mid,#contactBtn{
+     display: none;
+ }
+ 
+ 
+ #hamburger {
+   display: flex;
+   cursor: pointer;
+   flex-direction: column;
+ }
+ 
+ #navbar {
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   z-index: 999;
+ }
+ #logo1{
+     width:100px; 
+ }
+ 
+ #news{
+     font-size: 3rem;
+    
+ }
+ #footer{
+    font-size: 14px;
+ }
+   
+ }
+
+
+
+  @media screen and (max-width: 420px)and (max-height: 750px) {
+    .cont{
+        height:160vh;  
+        display: flex;
+        flex-wrap: wrap;
+         justify-content: flex-start;
+        align-items: center;
+        justify-items: center; 
+        transform: translateY(100px);
+        z-index: -1;
+    }
+       
+        .cont .content{
+        width:80%; 
+        
+        display: flex;
+        flex-wrap: wrap;
+        z-index: -1;
+       } 
+    
+       .cont .content .left {
+        font-size: 16px;
+        z-index: -1;
+       }
+  
+  }
+  @media  screen and (max-width:400px) {
+  
+    .cont{
+        height:150vh;  
+        display: flex;
+        flex-wrap: wrap;
+         justify-content: flex-start;
+        align-items: center;
+        justify-items: center; 
+        transform: translateY(100px);
+        z-index: -1;
+    }
+       
+        .cont .content{
+        width:80%; 
+        
+        display: flex;
+        flex-wrap: wrap;
+        z-index: -1;
+       } 
+    
+       .cont .content .left {
+        font-size: 16px;
+        z-index: -1;
+       }
+    
+   }
+  @media screen and (max-width:320px){
+    .cont{
+        height:230vh;  
+        display: flex;
+        flex-wrap: wrap;
+         justify-content: flex-start;
+        align-items: center;
+        justify-items: center; 
+        transform: translateY(100px);
+        z-index: -1;
+    }
+       
+        .cont .content{
+        width:80%; 
+        
+        display: flex;
+        flex-wrap: wrap;
+        z-index: -1;
+       } 
+    
+       .cont .content .left {
+        font-size: 16px;
+        z-index: -1;
+       }
+  }
+
+
+  
+   
+   @media only screen   
+  and (min-width: 1030px)   
+  and (max-width: 1366px)  
+  { 
+    .cont{
+        height:110vh;  
+        display: flex;
+        flex-wrap: wrap;
+         justify-content: flex-start;
+        align-items: center;
+        justify-items: center; 
+        transform: translateY(100px);
+        z-index: -1;
+    }
+       
+        .cont .content{
+        width:80%; 
+        transform: translateY(100px);
+        display: flex;
+      
+        z-index: -1;
+       } 
+    
+       .cont .content .left {
+        font-size: 16px;
+        z-index: -1;
+       }
+
+       #navbar{
+        z-index: 999;
+       }
+  } 
