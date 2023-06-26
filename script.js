@@ -272,9 +272,9 @@ instagram.addEventListener("click",function(){
 let mediaQuery = window.matchMedia("(max-width: 767px)");
 
 const mainPageWriting = document.createElement("a");
-    mainPageWriting.textContent="Strona główna";
+    mainPageWriting.textContent="O nas";
     mainPageWriting.addEventListener("click",function(){
-        window.location.href="./index.html";
+        window.location.href="./uslugi.html";
     });
 
 
@@ -282,7 +282,7 @@ const mainPageWriting = document.createElement("a");
     serivceWriting.textContent="Usługi";
 
     serivceWriting.addEventListener("click",function(){
-        window.location.href="./uslugi.html";
+        window.location.href="./index.html";
     });
 
 
@@ -317,15 +317,15 @@ if(mediaQuery.matches){
                         menu.appendChild(contactWriting);
                         menu.appendChild(newsWriting);
                         menu.appendChild(spons); 
-                        mainPageWriting.textContent="Strona główna";
+                        mainPageWriting.textContent="O nas";
                         mainPageWriting.addEventListener("click",function(){
-                                window.location.href="./index.html";
+                                window.location.href="./uslugi.html";
                         });
          
                         serivceWriting.textContent="Usługi";
          
                         serivceWriting.addEventListener("click",function(){
-                            window.location.href="./uslugi.html";
+                            window.location.href="./index.html";
                         });
          
                         contactWriting.textContent="Kontakt";
@@ -346,7 +346,7 @@ if(mediaQuery.matches){
                         document.addEventListener("click",function(event){
                          if(!menu.contains(event.target)&& !hamburger.contains(event.target)){
                                  menu.remove();
-                                 isExisting=false;
+                                 isExisting1=false;
                          }
                         }); 
                 }else {
